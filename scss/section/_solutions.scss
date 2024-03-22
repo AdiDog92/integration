@@ -1,0 +1,112 @@
+.solutions {
+  margin-bottom: 96px;
+  .solutions__inner {
+    position: relative;
+    padding: 126px 98px;
+    border-radius: 32px;
+    background: #e8e8e8;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      top: -256px;
+      left: 29.77%;
+      width: 556px;
+      height: 448px;
+      background: url("../img/solutions-img.svg") center / cover no-repeat;
+    }
+  }
+  .solutions__title {
+    position: relative;
+    z-index: 1;
+    max-width: 725px;
+    margin: 0 auto 48px;
+    margin-bottom: 48px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 114%;
+    text-align: center;
+    color: #46474e;
+  }
+  .solutions__description {
+    max-width: 814px;
+    margin: 0 auto 72px;
+    font-weight: 300;
+    font-size: 23px;
+    line-height: 140%;
+    text-align: center;
+    color: #46474e;
+  }
+  .solutions__list-wrapper {
+    margin-bottom: 80px;
+    padding: 72px 104px;
+    border-radius: 24px;
+    background: #f3f0f0;
+  }
+  .solutions__subtitle {
+    margin-bottom: 48px;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 140%;
+    text-align: center;
+    color: #46474e;
+  }
+  // .solutions__list-row {
+  // }
+  .solutions__list {
+    padding: 0;
+    margin: 0 0;
+  }
+  .solutions__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+
+    &:not(:last-child) {
+      margin-bottom: 48px;
+    }
+
+    .icon {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      background: url("../img/solutions-list-icon.svg") center / cover no-repeat;
+    }
+    .text {
+      max-width: 345px;
+    }
+  }
+  .solutions__meetup {
+    align-items: center;
+  }
+  .solutions__meetup-prev {
+    max-width: 454px;
+    margin: 0 auto;
+  }
+  // .solutions__meetup-img {
+  // }
+  .solutions__meetup-content {
+  }
+  .solutions__meetup-text {
+    margin-bottom: 72px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 114%;
+    color: #46474e;
+  }
+  .solutions__button {
+    display: block;
+    width: fit-content;
+    padding: 31px 32px;
+    background: #ffd66b;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #61504d;
+  }
+}

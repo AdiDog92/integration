@@ -1,0 +1,13 @@
+@import 'fonts';
+@import 'nullstyle';
+@import 'default';
+
+// Секции лендоса
+@import 'section/header';
+@import 'section/hero';
+@import 'section/situation';
+@import 'section/solutions';
+@import 'section/our-stories';
+@import 'section/results.scss';
+
+@import 'section/footer';

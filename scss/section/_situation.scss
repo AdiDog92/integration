@@ -1,0 +1,69 @@
+.situations {
+  margin-bottom: 190px;
+  .situations__inner {
+    position: relative;
+    padding: 192px 96px 96px;
+    border-radius: 32px;
+    background: #46474e;
+  }
+  .situations__text-wrapper {
+    max-width: 528px;
+  }
+  .situations__title {
+    margin-bottom: 48px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 114%;
+    text-align: center;
+    color: #fff;
+  }
+  .situations__descr {
+    margin-bottom: 72px;
+    font-weight: 300;
+    font-size: 23px;
+    line-height: 140%;
+    text-align: center;
+    color: #fff;
+  }
+  .situations__img {
+    position: absolute;
+    top: 56px;
+    right: 82px;
+    width: 607px;
+  }
+  .situations__list-row {
+    border-radius: 24px;
+    padding: 104px;
+    background: #585960;
+  }
+  .situations__list {
+    padding: 0;
+    margin: 0;
+  }
+  .situations__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 140%;
+    color: #fff;
+
+    &:not(:last-child) {
+      margin-bottom: 48px;
+    }
+    .icon {
+      flex-shrink: 0;
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background: url('../img/situation-list-icon.svg') center / cover no-repeat ;
+    }
+    .text {
+      max-width: 336px;
+      b {
+        font-weight: 700;
+      }
+    }
+  }
+}
