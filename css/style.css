@@ -1996,59 +1996,86 @@ main {
   margin-bottom: 96px;
 }
 .work .work__inner {
+  padding: 96px;
   border-radius: 32px;
   background: #e8e8e8;
+}
+.work .work__title {
+  max-width: 436px;
+  margin-bottom: 72px;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 114%;
+  text-align: center;
+  color: #46474e;
 }
 .work .work__card {
   position: sticky;
   top: 0;
-  width: 330px;
-  height: 150px;
-  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 48px;
+  padding: 48px;
+  max-width: 620px;
+  margin-bottom: 8px;
+  border-radius: 24px;
+  -webkit-box-shadow: 0 5px 10px 0 rgba(52, 52, 52, 0.02);
+          box-shadow: 0 5px 10px 0 rgba(52, 52, 52, 0.02);
+  border: 1px solid rgba(52, 52, 52, 0.02);
+  background: #fff;
 }
 .work .work__card--1 {
-  z-index: 10;
-  background-color: red;
+  z-index: 1;
+  margin-bottom: 48px;
 }
 .work .work__card--2 {
-  top: 48px;
-  z-index: 9;
-  background-color: pink;
+  z-index: 2;
 }
 .work .work__card--3 {
-  top: 96px;
-  z-index: 8;
-  background-color: gray;
+  z-index: 3;
 }
 .work .work__card--4 {
-  top: 144px;
-  z-index: 7;
-  background-color: green;
+  z-index: 4;
 }
 .work .work__card--5 {
-  top: 192px;
-  z-index: 6;
-  background-color: brown;
+  z-index: 5;
 }
 .work .work__card--6 {
-  top: 240px;
-  z-index: 5;
-  background-color: aqua;
+  z-index: 6;
 }
 .work .work__card--7 {
-  top: 288px;
-  z-index: 4;
-  background-color: aquamarine;
+  z-index: 7;
 }
 .work .work__card--8 {
-  top: 336px;
-  z-index: 3;
-  background-color: rebeccapurple;
+  z-index: 8;
 }
 .work .work__card--9 {
-  top: 384px;
-  z-index: 2;
-  background-color: orange;
+  z-index: 9;
+}
+.work .work__card-number {
+  -webkit-text-stroke: 1.5px #ff8536;
+  font-size: 96px;
+  font-weight: 900;
+  color: transparent;
+}
+.work .work__card-text .subtitle {
+  margin-bottom: 24px;
+  font-size: 23px;
+  color: #46474e;
+}
+.work .work__card-text .description {
+  margin-bottom: 0;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #46474e;
+}
+.work .work__form-banner {
+  margin-top: 222px;
 }
 
 .qa {

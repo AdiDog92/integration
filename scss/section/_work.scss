@@ -1,71 +1,95 @@
 .work {
   margin-bottom: 96px;
   .work__inner {
+    padding: 96px;
     border-radius: 32px;
     background: #e8e8e8;
   }
-  .work__prev {
-  }
-  .wokr__img {
-  }
-  .col-7 {
+  // .work__prev {
+  // }
+  // .wokr__img {
+  // }
+  .work__title {
+    max-width: 436px;
+    margin-bottom: 72px;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 114%;
+    text-align: center;
+    color: #46474e;
   }
   .work__card {
     position: sticky;
     top: 0;
-    width: 330px;
-    height: 150px;
-    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    padding: 48px;
+    max-width: 620px;
+    margin-bottom: 8px;
+    border-radius: 24px;
+    box-shadow: 0 5px 10px 0 rgba(52, 52, 52, 0.02);
+    border: 1px solid rgba(52, 52, 52, 0.02);
+    background: #fff;
+
     &--1 {
-      z-index: 10;
-      background-color: red;
+      z-index: 1;
+      margin-bottom: 48px;
     }
     &--2 {
-      top: 48px;
-      z-index: 9;
-      background-color: pink;
+      // top: 48px;
+      z-index: 2;
     }
     &--3 {
-      top: 96px;
-      z-index: 8;
-      background-color: gray;
+      // top: 96px;
+      z-index: 3;
     }
     &--4 {
-      top: 144px;
-
-      z-index: 7;
-      background-color: green;
+      // top: 144px;
+      z-index: 4;
     }
     &--5 {
-      top: 192px;
-
-      z-index: 6;
-      background-color: brown;
+      // top: 192px;
+      z-index: 5;
     }
     &--6 {
-      top: 240px;
-
-      z-index: 5;
-      background-color: aqua;
+      // top: 240px;
+      z-index: 6;
     }
     &--7 {
-      top: 288px;
-
-      z-index: 4;
-      background-color: aquamarine;
+      // top: 288px;
+      z-index: 7;
     }
     &--8 {
-      top: 336px;
-
-      z-index: 3;
-      background-color: rebeccapurple;
+      // top: 336px;
+      z-index: 8;
     }
     &--9 {
-      top: 384px;
-
-      z-index: 2;
-      background-color: orange;
+      // top: 384px;
+      z-index: 9;
     }
-    
+  }
+  .work__card-number {
+    -webkit-text-stroke: 1.5px #ff8536;
+    font-size: 96px;
+    font-weight: 900;
+    color: transparent;
+  }
+  .work__card-text {
+    .subtitle {
+      margin-bottom: 24px;
+      font-size: 23px;
+      color: #46474e;
+    }
+    .description {
+      margin-bottom: 0;
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 1.6;
+      color: #46474e;
+    }
+  }
+  .work__form-banner {
+    margin-top: 222px;
   }
 }
