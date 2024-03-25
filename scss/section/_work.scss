@@ -1,0 +1,71 @@
+.work {
+  margin-bottom: 96px;
+  .work__inner {
+    border-radius: 32px;
+    background: #e8e8e8;
+  }
+  .work__prev {
+  }
+  .wokr__img {
+  }
+  .col-7 {
+  }
+  .work__card {
+    position: sticky;
+    top: 0;
+    width: 330px;
+    height: 150px;
+    margin-bottom: 10px;
+    &--1 {
+      z-index: 10;
+      background-color: red;
+    }
+    &--2 {
+      top: 48px;
+      z-index: 9;
+      background-color: pink;
+    }
+    &--3 {
+      top: 96px;
+      z-index: 8;
+      background-color: gray;
+    }
+    &--4 {
+      top: 144px;
+
+      z-index: 7;
+      background-color: green;
+    }
+    &--5 {
+      top: 192px;
+
+      z-index: 6;
+      background-color: brown;
+    }
+    &--6 {
+      top: 240px;
+
+      z-index: 5;
+      background-color: aqua;
+    }
+    &--7 {
+      top: 288px;
+
+      z-index: 4;
+      background-color: aquamarine;
+    }
+    &--8 {
+      top: 336px;
+
+      z-index: 3;
+      background-color: rebeccapurple;
+    }
+    &--9 {
+      top: 384px;
+
+      z-index: 2;
+      background-color: orange;
+    }
+    
+  }
+}
