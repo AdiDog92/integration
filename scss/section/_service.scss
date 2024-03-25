@@ -1,0 +1,219 @@
+.service {
+  margin-bottom: 96px;
+  .service__inner {
+    padding: 96px;
+    border-radius: 48px;
+    background-color: #e8e8e8;
+  }
+  .service__title {
+    margin-bottom: 71px;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.14;
+    text-align: center;
+    color: #46474e;
+  }
+  .service__cards-wrapper {
+    position: relative;
+    max-height: 669px;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      height: 193px;
+      background: linear-gradient(
+        180deg,
+        rgb(232, 232, 232, 0) 0%,
+        rgb(232, 232, 232) 100%
+      );
+      transition: 1s ease;
+    }
+
+    &.end {
+      &::before {
+        opacity: 0;
+      }
+    }
+  }
+  .service__cards-inner {
+    margin-bottom: 48px;
+  }
+  .service__card {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    height: calc(100% - 24px);
+    margin-bottom: 24px;
+    padding: 48px;
+    border-radius: 24px;
+    background-color: #f3f0f0;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #ffd66b;
+    }
+  }
+  .service__card-top {
+    margin-bottom: 70px;
+  }
+  .service__card-title {
+    margin-bottom: 32px;
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 1.14;
+    color: #46474e;
+  }
+  .service__card-list {
+    padding-left: 15px;
+    margin: 0;
+  }
+  .service__card-item {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #46474e;
+    list-style-type: disc;
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+  .service__card-term {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #46474e;
+    .icon {
+      width: 24px;
+      height: 24px;
+      background: url("../img/timer-start.svg") center / contain no-repeat;
+    }
+  }
+  .service__show-more {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: fit-content;
+    margin: -24px auto 197px;
+    padding: 27px 32px;
+    border: 1.5px solid #717278;
+    border-radius: 12px;
+    background-color: #f3f0f0;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 100%;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #46474e;
+
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+  .service__form-inner {
+    position: relative;
+    padding: 72px;
+    border-radius: 32px;
+    background-color: #ffd66b;
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 268px;
+      background-color: #393a3f;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: 2;
+      right: 0;
+      top: 0;
+      bottom: -28px;
+      width: 634px;
+      background: url('../img/kristina-2.png') center;
+      background-repeat: no-repeat;
+    }
+  }
+  .service__form-title {
+    max-width: 532px;
+    margin-bottom: 40px;
+    font-size: 40px;
+    font-weight: 100;
+    line-height: 1.14;
+    color: #46474e;
+  }
+  .service__form-description {
+    width: 470px;
+    height: 80px;
+    margin-bottom: 61px;
+    font-size: 23px;
+    font-weight: 300;
+    line-height: 1.4;
+    color: #46474e;
+  }
+  .service__form {
+    max-width: 284px;
+  }
+  .service__form-control {
+    width: 100%;
+    height: 72px;
+    border: 1.5px solid #ffa469;
+    border-radius: 12px;
+    background-color: #ffd66b;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 160%;
+    text-align: center;
+    color: #46474e;
+    &::placeholder {
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 160%;
+      color: #ffa469;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  .service__button-wrapper {
+    position: relative;
+  }
+  .service__form-submit {
+    width: fit-content;
+    padding: 24px 32px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 140%;
+    letter-spacing: 0.04em;
+    color: #46474e;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 12px;
+    background-color: #fff;
+  }
+  .service__button-info {
+    position: absolute;
+    right: -136px;
+    top: 35%;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 140%;
+    color: #46474e;
+  }
+}
