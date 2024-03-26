@@ -21,30 +21,31 @@ document.addEventListener("DOMContentLoaded", () => {
   // });
 
   // Аккордион
-
+  
   const accordionLabels = document.querySelectorAll(".qa__lable-inner");
   const accordionBoxes = document.querySelectorAll(".qa__box");
   const qaInfo = document.querySelectorAll(".qa__info");
 
   accordionLabels.forEach((item) => {
-    item.addEventListener("click, touchend", function (e) {
-      e.preventDefault();
-
-      const currentBox = this.closest(".qa__box");
-      const currentContent = this.nextElementSibling;
-
-      accordionBoxes.forEach((box) => {
-        box.classList.remove("open");
-      });
-      qaInfo.forEach((item) => {
-        item.style.maxHeight = "0";
-      });
-
-      currentBox.classList.toggle("open");
-
-      if (currentBox.classList.contains("open")) {
-        currentContent.style.maxHeight = `${currentContent.scrollHeight}px`;
-      }
-    });
+    item.addEventListener("click", accordionAction);
+    item.addEventListener("touchend", accordionAction);
   });
+
+  function accordionAction() {
+    const currentBox = this.closest(".qa__box");
+    const currentContent = this.nextElementSibling;
+
+    accordionBoxes.forEach((box) => {
+      box.classList.remove("open");
+    });
+    qaInfo.forEach((item) => {
+      item.style.maxHeight = "0";
+    });
+
+    currentBox.classList.toggle("open");
+
+    if (currentBox.classList.contains("open")) {
+      currentContent.style.maxHeight = `${currentContent.scrollHeight}px`;
+    }
+  }
 });
