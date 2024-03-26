@@ -1,13 +1,50 @@
 .situations {
   margin-bottom: 190px;
+  @media (max-width: 991px) {
+    margin-bottom: 108px;
+  }
+  @media (max-width: 768px) {
+    margin-bottom: 98px;
+  }
   .situations__inner {
     position: relative;
     padding: 192px 96px 96px;
     border-radius: 32px;
     background: #46474e;
+
+    @media (max-width: 1240px) {
+      padding: 126px 62px 62px;
+    }
+    @media (max-width: 991px) {
+      padding: 63px 32px 32px;
+    }
+    @media (max-width: 768px) {
+      padding: 32px 16px 32px;
+    }
+
+    &::before {
+      @media (max-width: 768px) {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        inset: 0 -20px;
+        background-color: #46474e;
+      }
+    }
   }
   .situations__text-wrapper {
-    max-width: 528px;
+    width: 528px;
+
+    @media (max-width: 1240px) {
+      width: 398px;
+    }
+
+    @media (max-width: 991px) {
+      width: 300px;
+    }
+    @media (max-width: 768px) {
+      margin: 0 auto;
+    }
   }
   .situations__title {
     margin-bottom: 48px;
@@ -16,6 +53,14 @@
     line-height: 114%;
     text-align: center;
     color: #fff;
+
+    @media (max-width: 991px) {
+      margin-bottom: 36px;
+      font-size: 36px;
+    }
+    @media (max-width: 991px) {
+      font-size: 28px;
+    }
   }
   .situations__descr {
     margin-bottom: 72px;
@@ -24,21 +69,61 @@
     line-height: 140%;
     text-align: center;
     color: #fff;
+
+    @media (max-width: 991px) {
+      margin-bottom: 38px;
+      font-size: 18px;
+    }
+    @media (max-width: 768px) {
+      margin-bottom: 24px;
+      font-size: 16px;
+    }
   }
   .situations__img {
     position: absolute;
     top: 56px;
     right: 82px;
     width: 607px;
+
+    @media (max-width: 1240px) {
+      width: 526px;
+      right: 12px;
+    }
+
+    @media (max-width: 991px) {
+      top: 0;
+      width: 371px;
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
   .situations__list-row {
-    border-radius: 24px;
     padding: 104px;
+    border-radius: 24px;
     background: #585960;
+
+    @media (max-width: 1240px) {
+      padding: 43px;
+    }
+
+    @media (max-width: 991px) {
+      padding: {
+        left: 16px;
+        right: 16px;
+      };
+    }
   }
   .situations__list {
     padding: 0;
     margin: 0;
+
+    &:not(:last-child) {
+      @media (max-width: 768px) {
+        margin-bottom: 24px;
+      }
+    }
   }
   .situations__item {
     display: flex;
@@ -49,15 +134,22 @@
     line-height: 140%;
     color: #fff;
 
+    @media (max-width:768px) {
+      font-size: 16px;
+    }
+
     &:not(:last-child) {
       margin-bottom: 48px;
+      @media (max-width: 991px) {
+        margin-bottom: 32px;
+      }
     }
     .icon {
       flex-shrink: 0;
       display: inline-block;
       width: 24px;
       height: 24px;
-      background: url('../img/situation-list-icon.svg') center / cover no-repeat ;
+      background: url("../img/situation-list-icon.svg") center / cover no-repeat;
     }
     .text {
       max-width: 336px;
