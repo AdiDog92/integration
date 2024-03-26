@@ -49,17 +49,17 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.addEventListener("scroll", () => {
-    console.log("window =>", window.scrollY);
-    console.log(
-      "work-card--1",
-      document.querySelector(".work__card--1").offsetTop
-    );
-    console.log(document.querySelector(".wokr__img").alt);
+    // console.log("window =>", window.scrollY);
+    // console.log(
+    //   "work-card--1",
+    //   document.querySelector(".work__card--1").offsetTop
+    // );
+    // console.log(document.querySelector(".wokr__img").alt);
 
     if (
-      document.scrollY == document.querySelector(".work__card--1").offsetTop
+      document.scrollY == document.querySelector(".work__prev").offsetTop
     ) {
-      document.getElementsByClassName(".wokr__img").title = "Привет мир";
+      document.getElementsByClassName(".work__img").title = "Привет мир";
       return;
     }
   });

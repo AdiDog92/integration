@@ -5,8 +5,10 @@
     border-radius: 32px;
     background: #e8e8e8;
   }
-  // .work__prev {
-  // }
+  .work__prev {
+    position: sticky;
+    top: 0;
+  }
   // .wokr__img {
   // }
   .work__title {
@@ -90,6 +92,103 @@
     }
   }
   .work__form-banner {
+    position: relative;
     margin-top: 222px;
+    padding: 72px;
+    border-radius: 32px;
+    background-color: #ffd66b;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 268px;
+      background-color: #393a3f;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      right: 0;
+      // top: 30px;
+      bottom: 0px;
+      height: 536px;
+      width: 610px;
+      background: url("../img/natalia.png") center / contain no-repeat;
+    }
+  }
+  .work__form-title {
+    position: relative;
+    z-index: 3;
+    max-width: 558px;
+    margin-bottom: 91px;
+    font-size: 40px;
+    font-weight: 100;
+    line-height: 1.14;
+    color: #46474e;
+  }
+  .work__form-description {
+    width: 470px;
+    height: 80px;
+    margin-bottom: 61px;
+    font-size: 23px;
+    font-weight: 300;
+    line-height: 1.4;
+    color: #46474e;
+  }
+  .work__form {
+    max-width: 284px;
+  }
+  .work__form-control {
+    width: 100%;
+    height: 72px;
+    border: 1.5px solid #ffa469;
+    border-radius: 12px;
+    background-color: #ffd66b;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 160%;
+    text-align: center;
+    color: #46474e;
+    &::placeholder {
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 160%;
+      color: #ffa469;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  .work__button-wrapper {
+    position: relative;
+  }
+  .work__form-submit {
+    width: fit-content;
+    padding: 24px 32px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 140%;
+    letter-spacing: 0.04em;
+    color: #46474e;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 12px;
+    background-color: #fff;
+  }
+  .work__button-info {
+    position: absolute;
+    right: -136px;
+    top: 35%;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 140%;
+    color: #46474e;
   }
 }
