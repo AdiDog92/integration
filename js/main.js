@@ -1,24 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Показать еще
-  const showMore = document.querySelector(".our-stories__show-more");
-  const videoInner = document.querySelector(".our-stories__vide-inner");
-  let innerHeight = videoInner.offsetHeight;
+  // const showMore = document.querySelector(".our-stories__show-more");
+  // const videoInner = document.querySelector(".our-stories__vide-inner");
+  // let innerHeight = videoInner.offsetHeight;
 
-  showMore.addEventListener("click", (e) => {
-    e.preventDefault();
+  // showMore.addEventListener("click", (e) => {
+  //   e.preventDefault();
 
-    const cardHeight =
-      document.querySelector(".our-stories__card").offsetHeight;
-    const wrapperHeight = document.querySelector(".video-wrapper").offsetHeight;
+  //   const cardHeight =
+  //     document.querySelector(".our-stories__card").offsetHeight;
+  //   const wrapperHeight = document.querySelector(".video-wrapper").offsetHeight;
 
-    innerHeight += cardHeight;
-    videoInner.style.maxHeight = `${innerHeight + 24}px`;
+  //   innerHeight += cardHeight;
+  //   videoInner.style.maxHeight = `${innerHeight + 24}px`;
 
-    if (videoInner.clientHeight >= wrapperHeight - cardHeight) {
-      showMore.disabled = true;
-      videoInner.classList.add("end");
-    }
-  });
+  //   if (videoInner.clientHeight >= wrapperHeight - cardHeight) {
+  //     showMore.disabled = true;
+  //     videoInner.classList.add("end");
+  //   }
+  // });
 
   // Аккордион
 
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const qaInfo = document.querySelectorAll(".qa__info");
 
   accordionLabels.forEach((item) => {
-    item.addEventListener("click", function (e) {
+    item.addEventListener("click, touchend", function (e) {
       e.preventDefault();
 
       const currentBox = this.closest(".qa__box");
