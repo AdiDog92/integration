@@ -1,19 +1,28 @@
 .about-us {
   margin-bottom: 96px;
   .about-us__inner {
+    position: relative;
     padding: 96px;
     border-radius: 32px;
     background-color: #4f5058;
-  }
-  // .about-us__text {
 
-  // }
+    @media (max-width: 1240px) {
+      padding: 48px;
+    }
+    @media (max-width: 768px) {
+      padding: 16px;
+    }
+  }
   .about-us__title {
     margin-bottom: 13px;
     font-size: 48px;
     font-weight: 700;
     line-height: 1.14;
     color: #fff;
+
+    @media (max-width: 768px) {
+      font-size: 32px;
+    }
   }
   .about-us__description {
     max-width: 488px;
@@ -22,8 +31,32 @@
     font-weight: 300;
     line-height: 1.4;
     color: #fff;
+
+    @media (max-width: 991px) {
+      max-width: 100%;
+      margin-bottom: 24px;
+    }
+    @media (max-width: 991px) {
+      font-size: 18px;
+    }
+    
     b {
       font-weight: 700;
+    }
+
+    ~ svg {
+      @media (max-width: 991px) {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        display: block;
+        width: 150px;
+        height: 100px;
+      }
+      @media (max-width: 768px) {
+        width: 75px;
+        height: 50px;
+      }
     }
   }
   .about-us__prev {
@@ -40,5 +73,9 @@
     font-weight: 100;
     line-height: 1.14;
     color: #fff;
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
   }
 }

@@ -2435,9 +2435,20 @@ main {
   margin-bottom: 96px;
 }
 .about-us .about-us__inner {
+  position: relative;
   padding: 96px;
   border-radius: 32px;
   background-color: #4f5058;
+}
+@media (max-width: 1240px) {
+  .about-us .about-us__inner {
+    padding: 48px;
+  }
+}
+@media (max-width: 768px) {
+  .about-us .about-us__inner {
+    padding: 16px;
+  }
 }
 .about-us .about-us__title {
   margin-bottom: 13px;
@@ -2445,6 +2456,11 @@ main {
   font-weight: 700;
   line-height: 1.14;
   color: #fff;
+}
+@media (max-width: 768px) {
+  .about-us .about-us__title {
+    font-size: 32px;
+  }
 }
 .about-us .about-us__description {
   max-width: 488px;
@@ -2454,8 +2470,35 @@ main {
   line-height: 1.4;
   color: #fff;
 }
+@media (max-width: 991px) {
+  .about-us .about-us__description {
+    max-width: 100%;
+    margin-bottom: 24px;
+  }
+}
+@media (max-width: 991px) {
+  .about-us .about-us__description {
+    font-size: 18px;
+  }
+}
 .about-us .about-us__description b {
   font-weight: 700;
+}
+@media (max-width: 991px) {
+  .about-us .about-us__description ~ svg {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    display: block;
+    width: 150px;
+    height: 100px;
+  }
+}
+@media (max-width: 768px) {
+  .about-us .about-us__description ~ svg {
+    width: 75px;
+    height: 50px;
+  }
 }
 .about-us .about-us__prev {
   margin-top: auto;
@@ -2472,6 +2515,11 @@ main {
   font-weight: 100;
   line-height: 1.14;
   color: #fff;
+}
+@media (max-width: 768px) {
+  .about-us .about-us__prev-description {
+    font-size: 24px;
+  }
 }
 
 .work {
