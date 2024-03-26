@@ -91,6 +91,11 @@ main {
   line-height: 1.14;
   text-align: center;
   color: #46474e;
+  
+  @media (max-width: 768px) {
+    margin-bottom: 48px;
+    font-size: 32px;
+  }
 }
 .contact-us {
   margin-bottom: 105px;
@@ -100,4 +105,9 @@ main {
   line-height: 1.4;
   text-align: center;
   color: #46474e;
+
+  @media (max-width: 768px) {
+    margin-bottom: 72px;
+    font-size: 18px;
+  }
 }

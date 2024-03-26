@@ -131,6 +131,12 @@ main {
   text-align: center;
   color: #46474e;
 }
+@media (max-width: 768px) {
+  .have-question {
+    margin-bottom: 48px;
+    font-size: 32px;
+  }
+}
 
 .contact-us {
   margin-bottom: 105px;
@@ -140,6 +146,12 @@ main {
   line-height: 1.4;
   text-align: center;
   color: #46474e;
+}
+@media (max-width: 768px) {
+  .contact-us {
+    margin-bottom: 72px;
+    font-size: 18px;
+  }
 }
 
 .orange {
@@ -676,6 +688,17 @@ main {
   border-radius: 24px;
   background: #f3f0f0;
 }
+@media (max-width: 1240px) {
+  .solutions .solutions__list-wrapper {
+    padding: 48px 72px;
+  }
+}
+@media (max-width: 991px) {
+  .solutions .solutions__list-wrapper {
+    margin-bottom: 52px;
+    padding: 48px 16px;
+  }
+}
 .solutions .solutions__subtitle {
   margin-bottom: 48px;
   font-weight: 700;
@@ -684,9 +707,32 @@ main {
   text-align: center;
   color: #46474e;
 }
+@media (max-width: 991px) {
+  .solutions .solutions__subtitle {
+    margin-bottom: 32px;
+  }
+}
+@media (max-width: 768px) {
+  .solutions .solutions__subtitle {
+    margin-bottom: 24px;
+  }
+}
+.solutions .solutions__list-row {
+  margin-left: 0;
+  margin-right: 0;
+}
 .solutions .solutions__list {
-  padding: 0;
+  padding: 0 16px;
   margin: 0 0;
+}
+@media (max-width: 991px) {
+  .solutions .solutions__list {
+    font-size: 16px;
+    padding: 0;
+  }
+}
+.solutions .solutions__list:not(:last-child) {
+  margin-bottom: 16px;
 }
 .solutions .solutions__item {
   display: -webkit-box;
@@ -699,6 +745,11 @@ main {
 }
 .solutions .solutions__item:not(:last-child) {
   margin-bottom: 48px;
+}
+@media (max-width: 991px) {
+  .solutions .solutions__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
 }
 .solutions .solutions__item .icon {
   -ms-flex-negative: 0;
@@ -726,6 +777,12 @@ main {
   line-height: 114%;
   color: #46474e;
 }
+@media (max-width: 768px) {
+  .solutions .solutions__meetup-text {
+    font-size: 24px;
+    margin-bottom: 48px;
+  }
+}
 .solutions .solutions__button {
   display: block;
   width: -webkit-fit-content;
@@ -741,6 +798,12 @@ main {
   text-transform: uppercase;
   text-align: center;
   color: #61504d;
+}
+@media (max-width: 768px) {
+  .solutions .solutions__button {
+    width: 100%;
+    padding: 16px;
+  }
 }
 
 .our-stories {

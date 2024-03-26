@@ -97,6 +97,14 @@
     padding: 72px 104px;
     border-radius: 24px;
     background: #f3f0f0;
+
+    @media (max-width: 1240px) {
+      padding: 48px 72px;
+    }
+    @media (max-width: 991px) {
+      margin-bottom: 52px;
+      padding: 48px 16px;
+    }
   }
   .solutions__subtitle {
     margin-bottom: 48px;
@@ -105,12 +113,33 @@
     line-height: 140%;
     text-align: center;
     color: #46474e;
+
+    @media (max-width: 991px) {
+      margin-bottom: 32px;
+    }
+
+    @media (max-width: 768px) {
+      margin-bottom: 24px;
+    }
   }
-  // .solutions__list-row {
-  // }
+  .solutions__list-row {
+    margin: {
+      left: 0;
+      right: 0;
+    }
+  }
   .solutions__list {
-    padding: 0;
+    padding: 0 16px;
     margin: 0 0;
+
+    @media (max-width: 991px) {
+      font-size: 16px;
+      padding: 0;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
   }
   .solutions__item {
     display: flex;
@@ -119,6 +148,10 @@
 
     &:not(:last-child) {
       margin-bottom: 48px;
+
+      @media (max-width: 991px) {
+        margin-bottom: 32px;
+      }
     }
 
     .icon {
@@ -138,8 +171,6 @@
     max-width: 454px;
     margin: 0 auto;
   }
-  // .solutions__meetup-img {
-  // }
   .solutions__meetup-content {
   }
   .solutions__meetup-text {
@@ -148,6 +179,11 @@
     font-size: 32px;
     line-height: 114%;
     color: #46474e;
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+      margin-bottom: 48px;
+    }
   }
   .solutions__button {
     display: block;
@@ -162,5 +198,10 @@
     text-transform: uppercase;
     text-align: center;
     color: #61504d;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      padding: 16px;
+    }
   }
 }
