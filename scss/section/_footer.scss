@@ -3,13 +3,32 @@
     top: 158px;
   }
   background: #3f3f46;
+
+  @media (max-width: 991px) {
+    padding: {
+      top: 80px;
+    };
+  }
+  @media (max-width: 768px) {
+    padding: {
+      top: 48px;
+    };
+  }
   .footer__contact-wrapper {
     justify-content: space-between;
     margin-bottom: 80px;
+
+    @media (max-width: 991px) {
+      margin-bottom: 48px;
+    }
   }
   .footer__contact-list {
     padding-left: 0;
     margin-bottom: 57px;
+
+    @media (max-width: 991px) {
+      margin-bottom: 28px;
+    }
   }
   .footer__contact-item {
     display: flex;
@@ -20,6 +39,10 @@
     font-weight: 700;
     font-size: 40px;
     color: #f4ad7f;
+
+    @media (max-width: 768px) {
+      font-size: 32px;
+    }
   }
   .footer__mail-link {
     font-weight: 300;
@@ -34,12 +57,14 @@
     color: #fff;
   }
   .footer__contact-text {
+    margin-bottom: 0;
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
     color: #b2b2b5;
   }
   .footer__contact-addres {
+    margin-bottom: 0;
   }
   .footer__subtitle {
     max-width: 473px;
@@ -48,12 +73,20 @@
     font-size: 36px;
     line-height: 100%;
     color: #fff;
+
+    @media (max-width: 768px) {
+      font-size: 28px;
+    }
   }
   .footer__social-list {
     display: flex;
     gap: 8px;
     padding-left: 0;
     margin-bottom: 0;
+
+    @media (max-width: 991px) {
+      margin-bottom: 48px;
+    }
   }
   .footer__social-item {
     display: flex;
@@ -70,9 +103,13 @@
   }
   .footer__requisites-list {
     max-width: 237px;
+    margin-bottom: 0;
   }
 
   .footer__requisites-item {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
   }
   .footer__requisites-title {
     font-weight: 700;
@@ -81,6 +118,7 @@
     color: #fff;
   }
   .footer__requisites-text {
+    margin-bottom: 0;
     font-size: 14px;
     line-height: 160%;
     color: #fff;
@@ -98,6 +136,12 @@
     font-size: 13px;
     line-height: 160%;
     color: #b2b2b5;
+    
+    @media (max-width: 991px) {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
   }
   .footer__policy-link {
     padding: 0;
