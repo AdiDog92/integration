@@ -9,12 +9,12 @@
     @media (max-width: 1240px) {
       padding: 48px;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 991px) {
       padding: 16px;
     }
     &::before {
       @media (max-width: 768px) {
-        content: '';
+        content: "";
         position: absolute;
         inset: 0 -20px;
         z-index: -1;
@@ -126,7 +126,7 @@
       font-weight: 300;
       line-height: 1.6;
       color: #46474e;
-      
+
       @media (max-width: 991px) {
         font-size: 16px;
       }
@@ -139,6 +139,16 @@
     border-radius: 32px;
     background-color: #ffd66b;
     overflow: hidden;
+    @media (max-width: 1240px) {
+      margin-top: 110px;
+      padding: 48px;
+    }
+    @media (max-width: 991px) {
+      padding: 32px;
+    }
+    @media (max-width: 768px) {
+      padding: 16px;
+    }
 
     &::after {
       content: "";
@@ -149,6 +159,14 @@
       bottom: 0;
       width: 268px;
       background-color: #393a3f;
+
+      @media (max-width: 991px) {
+        width: 235px;
+      }
+
+      @media (max-width: 768px) {
+        display: none;
+      }
     }
 
     &::before {
@@ -156,22 +174,56 @@
       position: absolute;
       z-index: 2;
       right: 0;
-      // top: 30px;
       bottom: 0px;
       height: 536px;
       width: 610px;
       background: url("../img/natalia.png") center / contain no-repeat;
+
+      @media (max-width: 1240px) {
+        height: 453px;
+        width: 515px;
+      }
+
+      @media (max-width: 991px) {
+        height: 370px;
+        width: 425px;
+      }
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+  .work__banner-text {
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   }
   .work__form-title {
     position: relative;
     z-index: 3;
-    max-width: 558px;
+    width: 558px;
     margin-bottom: 91px;
     font-size: 40px;
     font-weight: 100;
     line-height: 1.14;
     color: #46474e;
+    @media (max-width: 1240px) {
+      width: 469px;
+      margin-bottom: 50px;
+      font-size: 36px;
+    }
+    @media (max-width: 991px) {
+      width: 298px;
+      font-size: 28px;
+    }
+    @media (max-width: 768px) {
+      width: 100%;
+      font-size: 22px;
+      text-align: center;
+    }
   }
   .work__form-description {
     width: 470px;
@@ -184,6 +236,11 @@
   }
   .work__form {
     max-width: 284px;
+
+    @media (max-width: 768px) {
+      max-width: 100%;
+      width: 100%;
+    }
   }
   .work__form-control {
     width: 100%;
@@ -222,6 +279,10 @@
     text-align: center;
     border-radius: 12px;
     background-color: #fff;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
   .work__button-info {
     position: absolute;
@@ -231,5 +292,9 @@
     font-size: 17px;
     line-height: 140%;
     color: #46474e;
+
+    @media (max-width: 991px) {
+      display: none;
+    }
   }
 }
