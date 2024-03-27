@@ -106,13 +106,36 @@
     background: #fccd82;
   }
   .pricing__form-banner {
+    position: relative;
     border-radius: 32px;
     background: #4f5058;
     padding: 16px 16px 16px 72px;
+
+    @media (max-width: 991px) {
+      padding: 32px;
+    }
+    @media (max-width: 768px) {
+      padding: 32px 0;
+    }
+
+    &::before {
+      @media (max-width: 768px) {
+        content: "";
+        position: absolute;
+        inset: 0 -20px;
+        z-index: -1;
+        background: #4f5058;
+      }
+    }
   }
   .pricing__banner-text {
     max-width: 515px;
     padding: 56px 0;
+
+    @media (max-width: 991px) {
+      padding: 0;
+      margin: 0 auto 32px;
+    }
   }
   .pricing__banner-title {
     margin-bottom: 61px;
@@ -120,16 +143,33 @@
     font-size: 40px;
     line-height: 114%;
     color: #fff;
+
+    @media (max-width: 991px) {
+      margin-bottom: 48px;
+      font-size: 32px;
+      text-align: center;
+    }
+    @media (max-width: 991px) {
+      margin-bottom: 32px;
+      font-size: 28px;
+    }
   }
   .pricing__banner-list {
     display: flex;
     align-items: center;
     gap: 24px;
     list-style: none;
+    padding-left: 0;
+    margin: 0;
+
+    @media (max-width: 768px) {
+      // flex-direction: column;
+      justify-content: space-between;
+    }
   }
   .pricing__banner-item {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     justify-content: center;
     height: 100%;
 
@@ -139,6 +179,10 @@
       font-size: 15px;
       text-align: center;
       color: #f3f0f0;
+
+      @media (max-width: 768px) {
+        margin-top: 16px;
+      }
     }
   }
   .pricing__banner-prev {
@@ -147,6 +191,16 @@
     justify-content: center;
     width: 152px;
     height: 130px;
+
+    @media (max-width: 768px) {
+      width: 102px;
+      height: 80px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
   .pricing__form-inner {
     display: flex;
@@ -155,30 +209,44 @@
     padding: 62px 16px;
     background: #fff;
     border-radius: 24px;
+
+    @media (max-width: 991px) {
+      flex-direction: row;
+      padding: 16px;
+    }
+    @media (max-width: 991px) {
+      flex-direction: column;
+      padding: 16px;
+    }
   }
   .pricing__fomr-top {
     max-width: 300px;
     margin: 0 auto auto;
-    margin-bottom: auto;
     text-align: center;
+    @media (max-width: 991px) {
+      flex-direction: row;
+      padding: 16px;
+    }
   }
   .pricing__form-title {
     margin-bottom: 32px;
     font-weight: 500;
     font-size: 32px;
     line-height: 100%;
-    text-align: center;
     color: #46474e;
   }
   .pricing__form-text {
     font-weight: 300;
     font-size: 23px;
-    text-align: center;
     color: #46474e;
   }
   .pricing__form {
     max-width: 300px;
     margin: 0 auto;
+
+    @media (max-width: 768px) {
+      max-width: 100%;
+    }
   }
   .pricing__form-control {
     margin-bottom: 24px;
