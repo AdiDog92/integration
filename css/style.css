@@ -2526,9 +2526,29 @@ main {
   margin-bottom: 96px;
 }
 .work .work__inner {
+  position: relative;
   padding: 96px;
   border-radius: 32px;
   background: #e8e8e8;
+}
+@media (max-width: 1240px) {
+  .work .work__inner {
+    padding: 48px;
+  }
+}
+@media (max-width: 768px) {
+  .work .work__inner {
+    padding: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .work .work__inner::before {
+    content: "";
+    position: absolute;
+    inset: 0 -20px;
+    z-index: -1;
+    background-color: #e8e8e8;
+  }
 }
 .work .work__prev {
   position: sticky;
@@ -2542,6 +2562,18 @@ main {
   line-height: 114%;
   text-align: center;
   color: #46474e;
+}
+@media (max-width: 1240px) {
+  .work .work__title {
+    margin-bottom: 58px;
+    font-size: 48px;
+  }
+}
+@media (max-width: 991px) {
+  .work .work__title {
+    margin-bottom: 48px;
+    font-size: 38px;
+  }
 }
 .work .work__card {
   position: sticky;
@@ -2561,6 +2593,26 @@ main {
           box-shadow: 0 5px 10px 0 rgba(52, 52, 52, 0.02);
   border: 1px solid rgba(52, 52, 52, 0.02);
   background: #fff;
+}
+@media (max-width: 1240px) {
+  .work .work__card {
+    gap: 24px;
+    padding: 32px;
+  }
+}
+@media (max-width: 991px) {
+  .work .work__card {
+    padding: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .work .work__card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 auto 8px;
+  }
 }
 .work .work__card--1 {
   z-index: 1;
@@ -2596,10 +2648,20 @@ main {
   font-weight: 900;
   color: transparent;
 }
+@media (max-width: 991px) {
+  .work .work__card-number {
+    font-size: 72px;
+  }
+}
 .work .work__card-text .subtitle {
   margin-bottom: 24px;
   font-size: 23px;
   color: #46474e;
+}
+@media (max-width: 991px) {
+  .work .work__card-text .subtitle {
+    font-size: 18px;
+  }
 }
 .work .work__card-text .description {
   margin-bottom: 0;
@@ -2607,6 +2669,11 @@ main {
   font-weight: 300;
   line-height: 1.6;
   color: #46474e;
+}
+@media (max-width: 991px) {
+  .work .work__card-text .description {
+    font-size: 16px;
+  }
 }
 .work .work__form-banner {
   position: relative;
