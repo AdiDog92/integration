@@ -2247,9 +2247,27 @@ main {
   margin-bottom: 96px;
 }
 .get .get__list-inner {
+  position: relative;
   margin-bottom: 96px;
   padding: 96px;
   border-radius: 24px;
+  background-color: #fff;
+}
+@media (max-width: 991px) {
+  .get .get__list-inner {
+    padding: 32px;
+  }
+}
+@media (max-width: 768px) {
+  .get .get__list-inner {
+    padding: 16px 0;
+  }
+}
+.get .get__list-inner::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0 -20px;
   background-color: #fff;
 }
 .get .get__title {
@@ -2261,6 +2279,18 @@ main {
   text-align: center;
   color: #46474e;
 }
+@media (max-width: 991px) {
+  .get .get__title {
+    margin-bottom: 58px;
+    font-size: 38px;
+  }
+}
+@media (max-width: 768px) {
+  .get .get__title {
+    margin-bottom: 32px;
+    font-size: 28px;
+  }
+}
 .get .get__list {
   padding-left: 0;
   margin-bottom: 0;
@@ -2271,6 +2301,20 @@ main {
      -moz-column-gap: 20px;
           column-gap: 20px;
 }
+@media (max-width: 991px) {
+  .get .get__list {
+    -webkit-column-gap: 16px;
+       -moz-column-gap: 16px;
+            column-gap: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .get .get__list {
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
+  }
+}
 .get .get__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2280,8 +2324,19 @@ main {
           align-items: flex-start;
   gap: 24px;
 }
+@media (max-width: 768px) {
+  .get .get__item {
+    gap: 8px;
+    margin-bottom: 38px;
+  }
+}
 .get .get__item:not(:nth-child(3n)) {
   margin-bottom: 72px;
+}
+@media (max-width: 991px) {
+  .get .get__item:not(:nth-child(3n)) {
+    margin-bottom: 38px;
+  }
 }
 .get .get__item-icon {
   display: -webkit-box;
@@ -2300,6 +2355,12 @@ main {
   border-radius: 14px;
   background-color: #f3f0f0;
 }
+@media (max-width: 991px) {
+  .get .get__item-icon {
+    width: 48px;
+    height: 48px;
+  }
+}
 .get .get__item-text-content {
   max-width: 321px;
 }
@@ -2310,7 +2371,13 @@ main {
   line-height: 1.14;
   color: #46474e;
 }
+@media (max-width: 768px) {
+  .get .get__item-subtitle {
+    margin-bottom: 16px;
+  }
+}
 .get .get__item-description {
+  margin-bottom: 0;
   font-size: 15px;
   line-height: 1.6;
   color: #46474e;
@@ -2321,6 +2388,40 @@ main {
   border-radius: 32px;
   background: #393a3f;
   overflow: hidden;
+}
+@media (max-width: 991px) {
+  .get .get__form-inner {
+    padding: 36px;
+  }
+}
+@media (max-width: 768px) {
+  .get .get__form-inner {
+    padding: 36px 16px 356px;
+  }
+}
+.get .get__form-inner::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: 0px;
+  right: 0px;
+  width: 584px;
+  height: 594px;
+  background: url("../img/dmitri.png") center/contain no-repeat;
+}
+@media (max-width: 991px) {
+  .get .get__form-inner::before {
+    bottom: -3px;
+    width: 394px;
+    height: 407px;
+  }
+}
+@media (max-width: 768px) {
+  .get .get__form-inner::before {
+    bottom: 0px;
+    width: 332px;
+    height: 336px;
+  }
 }
 .get .get__form-inner::after {
   content: "";
@@ -2333,15 +2434,17 @@ main {
   -webkit-transform: rotate(13deg);
           transform: rotate(13deg);
 }
-.get .get__form-inner::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  bottom: 0px;
-  right: 0px;
-  width: 584px;
-  height: 594px;
-  background: url("../img/dmitri.png") center/contain no-repeat;
+@media (max-width: 991px) {
+  .get .get__form-inner::after {
+    width: 385px;
+  }
+}
+@media (max-width: 768px) {
+  .get .get__form-inner::after {
+    top: 320px;
+    -webkit-transform: rotate(51deg);
+            transform: rotate(51deg);
+  }
 }
 .get .get__form-title {
   max-width: 544px;
@@ -2351,6 +2454,20 @@ main {
   line-height: 114%;
   color: #fff;
 }
+@media (max-width: 991px) {
+  .get .get__form-title {
+    margin-bottom: 30px;
+    font-size: 36px;
+  }
+}
+@media (max-width: 768px) {
+  .get .get__form-title {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 28px;
+    text-align: center;
+  }
+}
 .get .get__form-description {
   max-width: 350px;
   margin-bottom: 48px;
@@ -2359,11 +2476,30 @@ main {
   line-height: 140%;
   color: #fff;
 }
+@media (max-width: 991px) {
+  .get .get__form-description {
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .get .get__form-description {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    text-align: center;
+  }
+}
 .get .get__form-description .orange {
   font-weight: 700;
 }
 .get .get__form {
   max-width: 284px;
+}
+@media (max-width: 768px) {
+  .get .get__form {
+    max-width: 100%;
+  }
 }
 .get .get__form-control {
   width: 100%;
@@ -2429,6 +2565,11 @@ main {
   text-transform: uppercase;
   text-align: center;
   color: #46474e;
+}
+@media (max-width: 768px) {
+  .get .get__form-submit {
+    width: 100%;
+  }
 }
 
 .about-us {

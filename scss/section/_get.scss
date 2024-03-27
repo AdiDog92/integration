@@ -1,10 +1,28 @@
 .get {
   margin-bottom: 96px;
+
   .get__list-inner {
+    position: relative;
     margin-bottom: 96px;
     padding: 96px;
     border-radius: 24px;
     background-color: #fff;
+
+    @media (max-width: 991px) {
+      padding: 32px;
+    }
+
+    @media (max-width: 768px) {
+      padding: 16px 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: 0 -20px;
+      background-color: #fff;
+    }
   }
   .get__title {
     max-width: 390px;
@@ -14,19 +32,42 @@
     line-height: 1.14;
     text-align: center;
     color: #46474e;
+
+    @media (max-width: 991px) {
+      margin-bottom: 58px;
+      font-size: 38px;
+    }
+    @media (max-width: 768px) {
+      margin-bottom: 32px;
+      font-size: 28px;
+    }
   }
   .get__list {
     padding-left: 0;
     margin-bottom: 0;
     column-count: 2;
     column-gap: 20px;
+    @media (max-width: 991px) {
+      column-gap: 16px;
+    }
+    @media (max-width: 768px) {
+      column-count: 1;
+    }
   }
   .get__item {
     display: flex;
     align-items: flex-start;
     gap: 24px;
+    @media (max-width: 768px) {
+      gap: 8px;
+      margin-bottom: 38px;
+    }
     &:not(:nth-child(3n)) {
       margin-bottom: 72px;
+
+      @media (max-width: 991px) {
+        margin-bottom: 38px;
+      }
     }
   }
   .get__item-icon {
@@ -38,6 +79,10 @@
     height: 56px;
     border-radius: 14px;
     background-color: #f3f0f0;
+    @media (max-width: 991px) {
+      width: 48px;
+      height: 48px;
+    }
   }
   .get__item-text-content {
     max-width: 321px;
@@ -48,8 +93,13 @@
     font-weight: 500;
     line-height: 1.14;
     color: #46474e;
+
+    @media (max-width: 768px) {
+      margin-bottom: 16px;
+    }
   }
   .get__item-description {
+    margin-bottom: 0;
     font-size: 15px;
     line-height: 1.6;
     color: #46474e;
@@ -61,16 +111,14 @@
     background: #393a3f;
     overflow: hidden;
 
-    &::after {
-      content: "";
-      position: absolute;
-      right: -76px;
-      top: -140px;
-      width: 457px;
-      height: 1100px;
-      background-color: #ffd66b;
-      transform: rotate(13deg);
+    @media (max-width: 991px) {
+      padding: 36px;
     }
+
+    @media (max-width: 768px) {
+      padding: 36px 16px 356px;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -80,6 +128,34 @@
       width: 584px;
       height: 594px;
       background: url("../img/dmitri.png") center / contain no-repeat;
+      @media (max-width: 991px) {
+        bottom: -3px;
+        width: 394px;
+        height: 407px;
+      }
+      @media (max-width: 768px) {
+        bottom: 0px;
+        width: 332px;
+        height: 336px;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -76px;
+      top: -140px;
+      width: 457px;
+      height: 1100px;
+      background-color: #ffd66b;
+      transform: rotate(13deg);
+      @media (max-width: 991px) {
+        width: 385px;
+      }
+      @media (max-width: 768px) {
+        top: 320px;
+        transform: rotate(51deg);
+      }
     }
   }
 
@@ -90,6 +166,19 @@
     font-size: 48px;
     line-height: 114%;
     color: #fff;
+
+    @media (max-width: 991px) {
+      margin-bottom: 30px;
+      font-size: 36px;
+    }
+    @media (max-width: 768px) {
+      margin: {
+        left: auto;
+        right: auto;
+      };
+      font-size: 28px;
+      text-align: center;
+    }
   }
 
   .get__form-description {
@@ -100,12 +189,29 @@
     line-height: 140%;
     color: #fff;
 
+    @media (max-width: 991px) {
+      margin-bottom: 30px;
+      font-size: 18px;
+    }
+    @media (max-width: 768px) {
+      margin: {
+        left: auto;
+        right: auto;
+      };
+      font-size: 16px;
+      text-align: center;
+    }
+
     .orange {
       font-weight: 700;
     }
   }
   .get__form {
     max-width: 284px;
+
+    @media (max-width: 768px) {
+      max-width: 100%;
+    }
   }
   .get__form-control {
     width: 100%;
@@ -143,5 +249,9 @@
     text-transform: uppercase;
     text-align: center;
     color: #46474e;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
 }
