@@ -147,7 +147,7 @@
       padding: 32px;
     }
     @media (max-width: 768px) {
-      padding: 16px;
+      padding: 16px 16px 350px;
     }
 
     &::after {
@@ -165,7 +165,8 @@
       }
 
       @media (max-width: 768px) {
-        display: none;
+        bottom: -82%;
+        transform: rotate(45deg);
       }
     }
 
@@ -178,19 +179,17 @@
       height: 536px;
       width: 610px;
       background: url("../img/natalia.png") center / contain no-repeat;
-
       @media (max-width: 1240px) {
         height: 453px;
         width: 515px;
       }
-
       @media (max-width: 991px) {
         height: 370px;
         width: 425px;
       }
-
       @media (max-width: 768px) {
-        display: none;
+        height: 325px;
+        width: 367px;
       }
     }
   }
