@@ -1454,9 +1454,34 @@ main {
   margin-bottom: 96px;
 }
 .choice .choice__inner {
+  position: relative;
   padding: 96px;
   border-radius: 48px;
   background: #46474e;
+}
+@media (max-width: 1240px) {
+  .choice .choice__inner {
+    padding: 48px;
+  }
+}
+@media (max-width: 991px) {
+  .choice .choice__inner {
+    padding: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .choice .choice__inner {
+    padding: 16px 0px;
+  }
+}
+@media (max-width: 768px) {
+  .choice .choice__inner::before {
+    content: "";
+    position: absolute;
+    inset: 0 -20px;
+    z-index: -1;
+    background-color: #46474e;
+  }
 }
 .choice .choice__title {
   margin-bottom: 48px;
@@ -1466,11 +1491,34 @@ main {
   text-align: center;
   color: #ffa469;
 }
+@media (max-width: 991px) {
+  .choice .choice__title {
+    margin-bottom: 32px;
+    font-size: 38px;
+  }
+}
+@media (max-width: 768px) {
+  .choice .choice__title {
+    margin-bottom: 24px;
+    font-size: 32px;
+  }
+}
 .choice .choice__kg {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  max-width: 583px;
   margin: 0 auto 48px;
+}
+.choice .choice__kg svg {
+  width: 100%;
+}
+@media (max-width: 991px) {
+  .choice .choice__kg {
+    margin-bottom: 32px;
+  }
+}
+@media (max-width: 768px) {
+  .choice .choice__kg {
+    margin-bottom: 24px;
+  }
 }
 .choice .choice__description {
   max-width: 676px;
@@ -1480,6 +1528,17 @@ main {
   line-height: 140%;
   text-align: center;
   color: #fff;
+}
+@media (max-width: 991px) {
+  .choice .choice__description {
+    margin-bottom: 32px;
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .choice .choice__description {
+    font-size: 16px;
+  }
 }
 .choice .choice__description .orange-bg {
   padding-right: 5px;
@@ -1492,32 +1551,95 @@ main {
   margin: 0 0 96px;
   padding: 0;
 }
+@media (max-width: 991px) {
+  .choice .card-col {
+    position: sticky;
+    top: 0;
+  }
+}
 .choice .choice__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  min-height: 272px;
+  padding: 43px;
   border-radius: 24px;
-  padding: 56px 0px 56px 56px;
-  max-width: 528px;
-  padding: 56px;
+  margin-bottom: 20px;
+}
+@media (max-width: 991px) {
+  .choice .choice__item {
+    max-width: 527px;
+    margin: 0 auto 20px;
+  }
+}
+@media (max-width: 768px) {
+  .choice .choice__item {
+    min-height: 201px;
+    padding: 24px;
+  }
 }
 .choice .choice__item--1 {
   background: url("../img/choice-card-1.svg") center right/auto no-repeat, #fff;
 }
+@media (max-width: 1100px) {
+  .choice .choice__item--1 {
+    background-size: 20%;
+  }
+}
 .choice .choice__item--2 {
   background: url("../img/choice-card-2.svg") center right/auto no-repeat, #fff;
+}
+@media (max-width: 1100px) {
+  .choice .choice__item--2 {
+    background-size: 30%;
+  }
+}
+@media (max-width: 768px) {
+  .choice .choice__item--2 {
+    background-size: 27%;
+  }
 }
 .choice .choice__item--3 {
   background: url("../img/choice-card-3.svg") bottom right/auto no-repeat, #fff;
 }
+@media (max-width: 1100px) {
+  .choice .choice__item--3 {
+    background-size: 25%;
+  }
+}
+@media (max-width: 768px) {
+  .choice .choice__item--3 {
+    background-size: 20%;
+  }
+}
 .choice .choice__item--4 {
   background: url("../img/choice-card-4.svg") 90% 50%/auto no-repeat, #fff;
+}
+@media (max-width: 1100px) {
+  .choice .choice__item--4 {
+    background-position: 100% 50%;
+  }
+}
+@media (max-width: 768px) {
+  .choice .choice__item--4 {
+    background-size: 16%;
+  }
 }
 .choice .choice__item--5 {
   background: url("../img/choice-card-5.svg") center right/auto no-repeat, #fff;
 }
+@media (max-width: 1100px) {
+  .choice .choice__item--5 {
+    background-size: 23%;
+  }
+}
 .choice .choice__item--6 {
   background: url("../img/choice-card-6.svg") center right/auto no-repeat, #fff;
+}
+@media (max-width: 1100px) {
+  .choice .choice__item--6 {
+    background-size: 30%;
+  }
 }
 .choice .choice__card-text {
   max-width: 300px;
@@ -1529,11 +1651,23 @@ main {
   line-height: 114%;
   color: #46474e;
 }
+@media (max-width: 768px) {
+  .choice .choice__card-subtitle {
+    font-size: 18px;
+  }
+}
 .choice .choice__card-descr {
+  margin-bottom: 0;
   font-weight: 300;
   font-size: 17px;
   line-height: 160%;
   color: #46474e;
+}
+@media (max-width: 768px) {
+  .choice .choice__card-descr {
+    max-width: 245px;
+    font-size: 14px;
+  }
 }
 .choice .choice__form-inner {
   position: relative;
@@ -1541,6 +1675,33 @@ main {
   border-radius: 32px;
   background: #393a3f;
   overflow: hidden;
+}
+@media (max-width: 991px) {
+  .choice .choice__form-inner {
+    padding: 36px;
+  }
+}
+@media (max-width: 991px) {
+  .choice .choice__form-inner {
+    padding: 16px 16px 350px;
+  }
+}
+.choice .choice__form-inner::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: -8px;
+  right: -28px;
+  width: 671px;
+  height: 572px;
+  background: url("../img/sergey.png") center/contain no-repeat;
+}
+@media (max-width: 991px) {
+  .choice .choice__form-inner::before {
+    bottom: 0;
+    width: 442px;
+    height: 349px;
+  }
 }
 .choice .choice__form-inner::after {
   content: "";
@@ -1553,15 +1714,15 @@ main {
   -webkit-transform: rotate(13deg);
           transform: rotate(13deg);
 }
-.choice .choice__form-inner::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  bottom: -8px;
-  right: -28px;
-  width: 671px;
-  height: 572px;
-  background: url(../img/sergey.png) center/contain no-repeat;
+@media (max-width: 991px) {
+  .choice .choice__form-inner::after {
+    width: 196px;
+  }
+}
+@media (max-width: 768px) {
+  .choice .choice__form-inner::after {
+    display: none;
+  }
 }
 .choice .choice__form-title {
   max-width: 544px;
@@ -1571,6 +1732,17 @@ main {
   line-height: 114%;
   color: #fff;
 }
+@media (max-width: 991px) {
+  .choice .choice__form-title {
+    margin-bottom: 32px;
+    font-size: 38px;
+  }
+}
+@media (max-width: 768px) {
+  .choice .choice__form-title {
+    font-size: 28px;
+  }
+}
 .choice .choice__form-description {
   max-width: 470px;
   margin-bottom: 48px;
@@ -1578,6 +1750,17 @@ main {
   font-size: 23px;
   line-height: 140%;
   color: #fff;
+}
+@media (max-width: 991px) {
+  .choice .choice__form-description {
+    margin-bottom: 32px;
+    font-size: 18px;
+  }
+}
+@media (max-width: 991px) {
+  .choice .choice__form-description {
+    font-size: 16px;
+  }
 }
 .choice .choice__form-description .orange {
   font-weight: 700;

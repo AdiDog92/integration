@@ -1,9 +1,29 @@
 .choice {
   margin-bottom: 96px;
   .choice__inner {
+    position: relative;
     padding: 96px;
     border-radius: 48px;
     background: #46474e;
+
+    @media (max-width: 1240px) {
+      padding: 48px;
+    }
+    @media (max-width: 991px) {
+      padding: 16px;
+    }
+    @media (max-width: 768px) {
+      padding: 16px 0px;
+    }
+    &::before {
+      @media (max-width: 768px) {
+        content: "";
+        position: absolute;
+        inset: 0 -20px;
+        z-index: -1;
+        background-color: #46474e;
+      }
+    }
   }
   .choice__title {
     margin-bottom: 48px;
@@ -12,10 +32,29 @@
     line-height: 114%;
     text-align: center;
     color: #ffa469;
+
+    @media (max-width: 991px) {
+      margin-bottom: 32px;
+      font-size: 38px;
+    }
+
+    @media (max-width: 768px) {
+      margin-bottom: 24px;
+      font-size: 32px;
+    }
   }
   .choice__kg {
-    width: fit-content;
+    max-width: 583px;
     margin: 0 auto 48px;
+    svg {
+      width: 100%;
+    }
+    @media (max-width: 991px) {
+      margin-bottom: 32px;
+    }
+    @media (max-width: 768px) {
+      margin-bottom: 24px;
+    }
   }
   .choice__description {
     max-width: 676px;
@@ -25,6 +64,13 @@
     line-height: 140%;
     text-align: center;
     color: #fff;
+    @media (max-width: 991px) {
+      margin-bottom: 32px;
+      font-size: 18px;
+    }
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
     .orange-bg {
       padding-right: 5px;
       color: #46474e;
@@ -38,37 +84,79 @@
     margin: 0 0 96px;
     padding: 0;
   }
+  .card-col {
+    @media (max-width: 991px) {
+      position: sticky;
+      top: 0;
+    }
+  }
   .choice__item {
     display: flex;
+    min-height: 272px;
+    padding: 43px;
     border-radius: 24px;
-    padding: 56px 0px 56px 56px;
-    max-width: 528px;
-    padding: 56px;
+    margin-bottom: 20px;
+
+    @media (max-width: 991px) {
+      max-width: 527px;
+      margin: 0 auto 20px;
+    }
+
+    @media (max-width: 768px) {
+      min-height: 201px;
+      padding: 24px;
+    }
 
     &--1 {
       background: url("../img/choice-card-1.svg") center right/ auto no-repeat,
         #fff;
-    }
 
+      @media (max-width: 1100px) {
+        background-size: 20%;
+      }
+    }
     &--2 {
       background: url("../img/choice-card-2.svg") center right/ auto no-repeat,
         #fff;
+      @media (max-width: 1100px) {
+        background-size: 30%;
+      }
+      @media (max-width: 768px) {
+        background-size: 27%;
+      }
     }
-
     &--3 {
       background: url("../img/choice-card-3.svg") bottom right/ auto no-repeat,
         #fff;
+      @media (max-width: 1100px) {
+        background-size: 25%;
+      }
+      @media (max-width: 768px) {
+        background-size: 20%;
+      }
     }
     &--4 {
       background: url("../img/choice-card-4.svg") 90% 50% / auto no-repeat, #fff;
+      @media (max-width: 1100px) {
+        background-position: 100% 50%;
+      }
+      @media (max-width: 768px) {
+        background-size: 16%;
+      }
     }
     &--5 {
       background: url("../img/choice-card-5.svg") center right/ auto no-repeat,
         #fff;
+      @media (max-width: 1100px) {
+        background-size: 23%;
+      }
     }
     &--6 {
       background: url("../img/choice-card-6.svg") center right/ auto no-repeat,
         #fff;
+      @media (max-width: 1100px) {
+        background-size: 30%;
+      }
     }
   }
   .choice__card-text {
@@ -80,13 +168,22 @@
     font-size: 23px;
     line-height: 114%;
     color: #46474e;
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
   }
 
   .choice__card-descr {
+    margin-bottom: 0;
     font-weight: 300;
     font-size: 17px;
     line-height: 160%;
     color: #46474e;
+    @media (max-width: 768px) {
+      max-width: 245px;
+      font-size: 14px;
+    }
   }
 
   .choice__form-inner {
@@ -95,16 +192,11 @@
     border-radius: 32px;
     background: #393a3f;
     overflow: hidden;
-
-    &::after {
-      content: "";
-      position: absolute;
-      right: -81px;
-      top: 0;
-      bottom: 0;
-      width: 285px;
-      background-color: #ffd66b;
-      transform: rotate(13deg);
+    @media (max-width: 991px) {
+      padding: 36px;
+    }
+    @media (max-width: 991px) {
+      padding: 16px 16px 350px;
     }
     &::before {
       content: "";
@@ -114,7 +206,29 @@
       right: -28px;
       width: 671px;
       height: 572px;
-      background: url(../img/sergey.png) center / contain no-repeat;
+      background: url("../img/sergey.png") center / contain no-repeat;
+      @media (max-width: 991px) {
+        bottom: 0;
+        width: 442px;
+        height: 349px;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      right: -81px;
+      top: 0;
+      bottom: 0;
+      width: 285px;
+      background-color: #ffd66b;
+      transform: rotate(13deg);
+
+      @media (max-width: 991px) {
+        width: 196px;
+      }
+      @media (max-width: 768px) {
+        display: none;
+      }
     }
   }
 
@@ -125,6 +239,13 @@
     font-size: 48px;
     line-height: 114%;
     color: #fff;
+    @media (max-width: 991px) {
+      margin-bottom: 32px;
+      font-size: 38px;
+    }
+    @media (max-width: 768px) {
+      font-size: 28px;
+    }
   }
 
   .choice__form-description {
@@ -134,7 +255,13 @@
     font-size: 23px;
     line-height: 140%;
     color: #fff;
-
+    @media (max-width: 991px) {
+      margin-bottom: 32px;
+      font-size: 18px;
+    }
+    @media (max-width: 991px) {
+      font-size: 16px;
+    }
     .orange {
       font-weight: 700;
     }
