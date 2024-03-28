@@ -29,6 +29,9 @@
     @media (max-width: 991px) {
       margin-bottom: 72px;
     }
+    @media (max-width: 991px) {
+      margin-bottom: 36px;
+    }
   }
   .pricing__card {
     display: flex;
@@ -52,6 +55,11 @@
       max-width: 100%;
       height: calc(100% - 24px);
       margin-bottom: 24px;
+    }
+
+    @media (max-width: 768px) {
+      max-width: 350px;
+      margin: 0 auto;
     }
 
     &--1 {
@@ -85,6 +93,7 @@
     @media (max-width: 991px) {
       max-width: 424px;
       margin: 0 auto;
+      padding-top: 0;
     }
   }
   .pricing__founder-img {
