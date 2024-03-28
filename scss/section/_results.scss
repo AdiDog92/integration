@@ -1,5 +1,6 @@
 .results {
   margin-bottom: 96px;
+
   .results-inner {
     position: relative;
     padding: 96px;
@@ -60,6 +61,7 @@
     max-height: 983px;
     height: auto;
     overflow: hidden;
+    transition: 1.5s ease;
 
     &::before {
       content: "";
@@ -84,7 +86,7 @@
     }
   }
   .results__card {
-    margin-bottom: 48px;
+    margin-bottom: 24px;
     padding: 21px 16px;
     border-radius: 32px;
     background-color: #585960;
@@ -251,7 +253,7 @@
     z-index: 1;
     display: block;
     width: fit-content;
-    margin: -24px auto 140px;
+    margin: 0px auto 140px;
     padding: 27px 32px;
     border: 1.5px solid #717278;
     border-radius: 12px;

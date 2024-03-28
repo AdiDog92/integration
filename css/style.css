@@ -154,6 +154,47 @@ main {
   }
 }
 
+.btn-blicked {
+  overflow: hidden;
+  position: relative;
+}
+
+.blicked::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  bottom: -50%;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.6)));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.6) 100%);
+  width: 45px;
+  -webkit-transform: skewX(-22deg);
+          transform: skewX(-22deg);
+  left: -65%;
+  -webkit-animation-name: blick;
+          animation-name: blick;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes blick {
+  60% {
+    left: 100%;
+  }
+  100% {
+    left: 130%;
+  }
+}
+
+@keyframes blick {
+  60% {
+    left: 100%;
+  }
+  100% {
+    left: 130%;
+  }
+}
 .orange {
   color: #ffa469;
 }
@@ -1284,6 +1325,8 @@ main {
   max-height: 983px;
   height: auto;
   overflow: hidden;
+  -webkit-transition: 1.5s ease;
+  transition: 1.5s ease;
 }
 .results .results__card-inner::before {
   content: "";
@@ -1302,7 +1345,7 @@ main {
   opacity: 0;
 }
 .results .results__card {
-  margin-bottom: 48px;
+  margin-bottom: 24px;
   padding: 21px 16px;
   border-radius: 32px;
   background-color: #585960;
@@ -1503,7 +1546,7 @@ main {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  margin: -24px auto 140px;
+  margin: 0px auto 140px;
   padding: 27px 32px;
   border: 1.5px solid #717278;
   border-radius: 12px;
@@ -3414,13 +3457,6 @@ main {
   .about-us .about-us__inner {
     padding: 16px;
   }
-}
-.about-us .about-us__inner::before {
-  content: "";
-  position: absolute;
-  inset: 0 -15px;
-  z-index: -1;
-  background-color: #4f5058;
 }
 .about-us .about-us__title {
   margin-bottom: 13px;

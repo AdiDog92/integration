@@ -50,36 +50,34 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // const showButtons = document.querySelectorAll("button.show-more");
+  const showButtons = document.querySelectorAll("button.show-more");
 
-  // Array.from(showButtons).forEach((button) => {
-  //   button.addEventListener("click", showMore);
-  // });
+  Array.from(showButtons).forEach((button) => {
+    button.addEventListener("click", showMore);
+  });
 
-  // function showMore(e) {
-  //   const currentBox = document.querySelector(`${this.dataset.id}`);
-  //   const cardHeight =
-  //     currentBox.children[currentBox.children.length - 1].offsetHeight;
+  function showMore(e) {
+    const currentBox = document.querySelector(`${this.dataset.id}`);
+    const cardHeight =
+      currentBox.children[currentBox.children.length - 1].offsetHeight;
 
-  //   let innerHeight = currentBox.offsetHeight;
-  //   innerHeight += cardHeight;
+    let innerHeight = currentBox.offsetHeight;
+    innerHeight += cardHeight;
 
-  //   currentBox.style.maxHeight = `${innerHeight + 24}px`;
+    currentBox.style.maxHeight = `${innerHeight + 24}px`;
 
-  //   console.log(innerHeight);
-
-  //   if (currentBox.offsetHeight >= currentBox.scrollHeight - cardHeight) {
-  //     this.disabled = true;
-  //     currentBox.classList.add("end");
-  //   }
-  // }
+    if (currentBox.offsetHeight >= currentBox.scrollHeight - cardHeight) {
+      this.disabled = true;
+      currentBox.classList.add("end");
+    }
+  }
 
   const cardImages = document.querySelectorAll(".our-stories__card-img");
 
   Array.from(
     cardImages.forEach((cardImage) => {
       cardImage.addEventListener("click", (e) => {
-        cardImage.parentNode.innerHTML = cardImage.dataset.iframe
+        cardImage.parentNode.innerHTML = cardImage.dataset.iframe;
       });
     })
   );
