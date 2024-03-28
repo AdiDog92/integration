@@ -310,6 +310,10 @@
       gap: 10px;
       max-width: 100%;
     }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   }
   .results__info-content {
     display: flex;
