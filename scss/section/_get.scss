@@ -17,11 +17,13 @@
     }
 
     &::before {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      inset: 0 -15px;
-      background-color: #fff;
+      @media (max-width: 768px) {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        inset: 0 -15px;
+        background-color: #fff;
+      }
     }
   }
   .get__title {
@@ -175,7 +177,7 @@
       margin: {
         left: auto;
         right: auto;
-      };
+      }
       font-size: 28px;
       text-align: center;
     }
@@ -197,7 +199,7 @@
       margin: {
         left: auto;
         right: auto;
-      };
+      }
       font-size: 16px;
       text-align: center;
     }

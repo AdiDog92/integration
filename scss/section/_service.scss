@@ -56,12 +56,6 @@
       );
       transition: 1s ease;
     }
-
-    &.end {
-      &::before {
-        opacity: 0;
-      }
-    }
   }
   .service__cards-inner {
     margin-bottom: 48px;

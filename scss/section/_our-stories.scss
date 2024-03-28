@@ -81,11 +81,11 @@
       transition: 1s ease;
     }
 
-    &.end {
-      &::before {
-        opacity: 0;
-      }
-    }
+    // &.end {
+    //   &::before {
+    //     opacity: 0;
+    //   }
+    // }
   }
   .our-stories__card {
     max-width: 528px;
@@ -102,15 +102,12 @@
   }
   .our-stories__prev {
     max-width: 496px;
-    max-height: 279px;
-    min-height: 234px;
     border-radius: 24px;
     overflow: hidden;
 
-    @media (max-width: 768px) {
-      max-height: 191px;
-      min-height: 176px;
-    }
+    // @media (max-width: 768px) {
+    //   // height: 191px;
+    // }
   }
   .our-stories__card-img {
     width: 100%;

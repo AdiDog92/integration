@@ -1,27 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Показать еще
+  // set iframe
+  const cardImages = document.querySelectorAll(".our-stories__card-img");
 
-  // const showMore = document.querySelector(".our-stories__show-more");
-  // const videoInner = document.querySelector(".our-stories__vide-inner");
-  // let innerHeight = videoInner.offsetHeight;
+  cardImages.forEach((cardImage) => {
+    cardImage.addEventListener("click", function (e) {
+      const boxHeight = this.offsetHeight;
+      const parentBox = this.parentNode;
 
-  // showMore.addEventListener("click", (e) => {
-  //   e.preventDefault();
+      parentBox.innerHTML = this.dataset.iframe;
+      parentBox.children[0].setAttribute("height", `${boxHeight}px`);
+    });
+  });
 
-  //   const cardHeight =
-  //     document.querySelector(".our-stories__card").offsetHeight;
-  //   const wrapperHeight = document.querySelector(".video-wrapper").offsetHeight;
-
-  //   innerHeight += cardHeight;
-  //   videoInner.style.maxHeight = `${innerHeight + 24}px`;
-
-  //   if (videoInner.clientHeight >= wrapperHeight - cardHeight) {
-  //     showMore.disabled = true;
-  //     videoInner.classList.add("end");
-  //   }
-  // });
-
-  // Аккордион
+  // accordion
 
   const accordionLabels = document.querySelectorAll(".qa__lable-inner");
   const accordionBoxes = document.querySelectorAll(".qa__box");
@@ -50,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // show more
   const showButtons = document.querySelectorAll("button.show-more");
 
   Array.from(showButtons).forEach((button) => {
@@ -71,14 +63,4 @@ document.addEventListener("DOMContentLoaded", () => {
       currentBox.classList.add("end");
     }
   }
-
-  const cardImages = document.querySelectorAll(".our-stories__card-img");
-
-  Array.from(
-    cardImages.forEach((cardImage) => {
-      cardImage.addEventListener("click", (e) => {
-        cardImage.parentNode.innerHTML = cardImage.dataset.iframe;
-      });
-    })
-  );
 });

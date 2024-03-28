@@ -111,9 +111,20 @@ main {
     font-size: 18px;
   }
 }
+
+.end {
+  &::before {
+    opacity: 0;
+  }
+}
 .btn-blicked {
   overflow: hidden;
   position: relative;
+  transition: .3s ease;
+
+  &:hover {
+    transform: scale(1.08);
+  }
 }
 .blicked {
   &::after {

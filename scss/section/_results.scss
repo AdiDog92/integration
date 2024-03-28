@@ -78,12 +78,6 @@
       );
       transition: 1s ease;
     }
-
-    &.end {
-      &::before {
-        opacity: 0;
-      }
-    }
   }
   .results__card {
     margin-bottom: 24px;
