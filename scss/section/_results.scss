@@ -323,8 +323,11 @@
 
     @media (max-width: 991px) {
       flex: 0 0 auto;
-      width: 100%;
+      width: 50%;
       gap: 24px;
+    }
+    @media (max-width: 768px) {
+      width: 100%;
     }
   }
   .results__info-img {
