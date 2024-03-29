@@ -1,3 +1,240 @@
+.small-container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
 .orange {
   color: #ffa469;
+}
+.have-question {
+  margin-bottom: 60px;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-align: center;
+  color: #46474e;
+
+  @media (max-width: 768px) {
+    margin-bottom: 48px;
+    font-size: 32px;
+  }
+}
+.contact-us {
+  margin-bottom: 105px;
+  font-size: 23px;
+  font-weight: 300;
+  font-stretch: normal;
+  line-height: 1.4;
+  text-align: center;
+  color: #46474e;
+
+  @media (max-width: 768px) {
+    margin-bottom: 72px;
+    font-size: 18px;
+  }
+}
+
+.end {
+  &::before {
+    opacity: 0;
+  }
+}
+.btn-blicked {
+  overflow: hidden;
+  position: relative;
+  transition: 0.3s ease;
+
+  &:hover {
+    transform: scale(1.08);
+  }
+}
+.blicked {
+  &::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    bottom: -50%;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.6) 100%
+    );
+    width: 45px;
+    transform: skewX(-22deg);
+    left: -65%;
+    animation-name: blick;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes blick {
+  60% {
+    left: 100%;
+  }
+  100% {
+    left: 130%;
+  }
+}
+
+.modal {
+  backdrop-filter: blur(5px);
+  .modal-content {
+    max-width: 404px;
+    padding: 16px 16px 32px;
+    border-radius: 24px;
+    background: #fff;
+  }
+  .modal-header {
+    margin-bottom: 17.25px;
+    padding: 0;
+    border: none;
+  }
+  .btn-close {
+    width: 21px;
+    height: 21px;
+    margin: 0;
+    margin-left: auto;
+    padding: 0;
+    border-radius: 50%;
+    background-color: #e8e8e8;
+    background-size: 7px 7px;
+    transition: 0.3s ease;
+
+    &:hover {
+      background-color: #ffd66b;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  .modal-body {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .modal__form-top {
+    margin-bottom: 48px;
+    text-align: center;
+  }
+  .modal__form-title {
+    margin-bottom: 32px;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 100%;
+    color: #46474e;
+  }
+  .modal__form-text {
+    font-weight: 300;
+    font-size: 23px;
+    color: #46474e;
+  }
+  .modal__form-control {
+    border-radius: 12px;
+    width: 100%;
+    height: 71.5px;
+    margin-bottom: 24.35px;
+    background: #f3f0f0;
+    border: 1.5px solid transparent;
+    transition: 0.3s ease;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 160%;
+    text-align: center;
+    color: #46474e;
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 160%;
+      text-align: center;
+      color: #b9babd;
+    }
+
+    &:focus {
+      box-shadow: none;
+      border-color: #ffa469;
+    }
+  }
+  .modal__form-submit {
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 31px;
+    border-radius: 12px;
+    background: #ffd66b;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #46474e;
+  }
+  .modal__policy-label {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    padding-left: 12px;
+    font-weight: 400;
+    font-size: 11px;
+    color: #8f8f92;
+  }
+  .modal__check {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+
+    &:checked {
+      ~ .modal__custom-check {
+        border-color: #ffa469;
+        &::before,
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .modal__custom-check {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #61504d;
+    border-radius: 3px;
+    transition: 0.3s ease;
+
+    &::before {
+      position: absolute;
+      content: "";
+      inset: 0;
+      background: #ffa469;
+      border: 1px solid #ffa469;
+      opacity: 0;
+      transition: 0.3s ease;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 3px;
+      top: -1px;
+      width: 5px;
+      height: 8px;
+      border: 2px solid #fff;
+      border-left: none;
+      border-top: none;
+      transform: rotate(45deg);
+      opacity: 0;
+      transition: 0.3s ease;
+    }
+  }
 }

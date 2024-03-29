@@ -27,8 +27,9 @@
     top: 0;
   }
   .work__title {
-    max-width: 436px;
-    margin-bottom: 72px;
+    // max-width: 436px;
+    // margin: 0 auto 72px;
+    margin-bottom: 63px;
     font-weight: 700;
     font-size: 56px;
     line-height: 114%;
@@ -44,9 +45,12 @@
       font-size: 38px;
     }
   }
+  .work__cards {
+    padding-top: 101px;
+  }
   .work__card {
     position: sticky;
-    top: 0;
+    top: 101px;
     display: flex;
     align-items: center;
     gap: 48px;
@@ -134,7 +138,7 @@
   }
   .work__form-banner {
     position: relative;
-    margin-top: 222px;
+    margin-top: 92px;
     padding: 72px;
     border-radius: 32px;
     background-color: #ffd66b;

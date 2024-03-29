@@ -64,15 +64,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // change photo
   const observer = new IntersectionObserver(
     (entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          console.log(entry);
-          // ссылка на оригинальное изображение хранится в атрибуте "data-src"
           document.querySelector(".work__img").src = entry.target.dataset.img;
-
-          // observer.unobserve(entry.target);
         }
       });
     },
@@ -81,5 +78,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document
     .querySelectorAll(".work__card[data-img]")
-    .forEach((img) => observer.observe(img));
+    .forEach((card) => observer.observe(card));
+
+
+    // sendForm
+  const forms = document.querySelectorAll("form");
+
+  forms.forEach((form) => {
+
+    form.addEventListener("submit", function (event) {
+      e.preventDefault();
+
+      const form = new FormData(event.target);
+
+    });
+  });
 });
