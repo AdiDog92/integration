@@ -1,5 +1,5 @@
 .results {
-  margin-bottom: 96px;
+  margin-bottom: 24px;
 
   .results-inner {
     position: relative;
@@ -132,8 +132,9 @@
     }
   }
   .results__card-info {
+    position: relative;
     display: flex;
-    padding: 64px 56px 73px;
+    padding: 64px 56px 149px;
     border-radius: 24px;
     background-color: #f3f0f0;
 
@@ -143,6 +144,55 @@
     @media (max-width: 768px) {
       flex-direction: column;
       padding: 16px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 56px;
+
+      @media (max-width: 991px) {
+        left: auto;
+        right: 56px;
+      }
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    &--1 {
+      &::before {
+        width: 277px;
+        height: 197px;
+        background: url("../img/results/results-card-1.svg") center / 100%
+          no-repeat;
+      }
+    }
+    &--2 {
+      &::before {
+        width: 186px;
+        height: 162px;
+        background: url("../img/results/results-card-2.svg") center / 100%
+          no-repeat;
+      }
+    }
+    &--3 {
+      &::before {
+        width: 186px;
+        height: 162px;
+        background: url("../img/results/results-card-3.svg") center / 100%
+          no-repeat;
+      }
+    }
+    &--4 {
+      &::before {
+        width: 186px;
+        height: 162px;
+        background: url("../img/results/results-card-4.svg") center / 100%
+          no-repeat;
+      }
     }
   }
   .results__card-left {
@@ -294,7 +344,6 @@
     @media (max-width: 991px) {
       margin-bottom: 32px;
       font-size: 28px;
-
     }
   }
   .results__banner-info {

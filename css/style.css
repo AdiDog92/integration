@@ -621,17 +621,7 @@ main {
 }
 
 .solutions {
-  margin-bottom: 96px;
-}
-@media (max-width: 991px) {
-  .solutions {
-    margin-bottom: 78px;
-  }
-}
-@media (max-width: 768px) {
-  .solutions {
-    margin-bottom: 54px;
-  }
+  margin-bottom: 24px;
 }
 .solutions .solutions__inner {
   position: relative;
@@ -858,7 +848,7 @@ main {
 }
 
 .our-stories {
-  margin-bottom: 96px;
+  margin-bottom: 24px;
 }
 .our-stories .our-stories__inner {
   position: relative;
@@ -1253,7 +1243,7 @@ main {
 }
 
 .results {
-  margin-bottom: 96px;
+  margin-bottom: 24px;
 }
 .results .results-inner {
   position: relative;
@@ -1408,10 +1398,11 @@ main {
   }
 }
 .results .results__card-info {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 64px 56px 73px;
+  padding: 64px 56px 149px;
   border-radius: 24px;
   background-color: #f3f0f0;
 }
@@ -1428,6 +1419,43 @@ main {
             flex-direction: column;
     padding: 16px;
   }
+}
+.results .results__card-info::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 56px;
+}
+@media (max-width: 991px) {
+  .results .results__card-info::before {
+    left: auto;
+    right: 56px;
+  }
+}
+@media (max-width: 768px) {
+  .results .results__card-info::before {
+    display: none;
+  }
+}
+.results .results__card-info--1::before {
+  width: 277px;
+  height: 197px;
+  background: url("../img/results/results-card-1.svg") center/100% no-repeat;
+}
+.results .results__card-info--2::before {
+  width: 186px;
+  height: 162px;
+  background: url("../img/results/results-card-2.svg") center/100% no-repeat;
+}
+.results .results__card-info--3::before {
+  width: 186px;
+  height: 162px;
+  background: url("../img/results/results-card-3.svg") center/100% no-repeat;
+}
+.results .results__card-info--4::before {
+  width: 186px;
+  height: 162px;
+  background: url("../img/results/results-card-4.svg") center/100% no-repeat;
 }
 .results .results__card-left {
   -webkit-box-flex: 0;
@@ -1875,7 +1903,7 @@ main {
 }
 
 .choice {
-  margin-bottom: 96px;
+  margin-bottom: 24px;
 }
 .choice .choice__inner {
   position: relative;
@@ -3454,7 +3482,7 @@ main {
 }
 
 .about-us {
-  margin-bottom: 96px;
+  margin-bottom: 24px;
 }
 .about-us .about-us__inner {
   position: relative;
@@ -3545,7 +3573,7 @@ main {
 }
 
 .work {
-  margin-bottom: 96px;
+  margin-bottom: 24px;
 }
 .work .work__inner {
   position: relative;

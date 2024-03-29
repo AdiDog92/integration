@@ -63,4 +63,23 @@ document.addEventListener("DOMContentLoaded", () => {
       currentBox.classList.add("end");
     }
   }
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          console.log(entry);
+          // ссылка на оригинальное изображение хранится в атрибуте "data-src"
+          document.querySelector(".work__img").src = entry.target.dataset.img;
+
+          // observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  document
+    .querySelectorAll(".work__card[data-img]")
+    .forEach((img) => observer.observe(img));
 });
