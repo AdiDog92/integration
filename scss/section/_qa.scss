@@ -1,5 +1,5 @@
 .qa {
-  margin-bottom: 142px;
+  margin-bottom: 24px; 
   .qa__inner {
     position: relative;
     padding: 96px;
@@ -14,27 +14,6 @@
       padding: 32px 16px;
     }
 
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: -37px;
-      left: 96px;
-      width: 384px;
-      height: 377px;
-      background: url("../img/qa-img.svg") center / contain no-repeat;
-
-      @media (max-width: 1240px) {
-        bottom: -46px;
-        left: 29px;
-        width: 334px;
-        height: 352px;
-      }
-
-      @media (max-width: 991px) {
-        display: none;
-      }
-    }
-
     &::after {
       @media (max-width: 768px) {
         content: "";
@@ -46,13 +25,12 @@
     }
   }
   .qa__title {
-    position: sticky;
-    top: 0px;
-    margin-bottom: 250px;
+    margin-bottom: 72px;
     font-size: 56px;
     font-weight: 700;
     line-height: 1.14;
     color: #46474e;
+    text-align: center;
 
     @media (max-width: 1240px) {
       font-size: 48px;
@@ -66,21 +44,13 @@
     }
   }
   .qa__box {
-    max-width: 620px;
-    margin-left: auto;
-    margin: {
-      left: auto;
-      bottom: 7px;
-    }
+    max-width: 712px;
+    margin: 0 auto 8px;
     border-radius: 24px;
     background-color: #f3f0f0;
     transition: 0.3s ease;
 
-    @media (max-width: 991px) {
-      max-width: 100%;
-    }
-
-    &.open {
+    &.open {  
       background-color: #fff;
 
       .qa__info {
@@ -156,7 +126,7 @@
     @media (max-width: 768px) {
       font-size: 14px;
     }
-
+    
     p {
       padding: 0 48px 48px;
 
