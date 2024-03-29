@@ -23,6 +23,13 @@
       height: 377px;
       background: url("../img/qa-img.svg") center / contain no-repeat;
 
+      @media (max-width: 1240px) {
+        bottom: -46px;
+        left: 29px;
+        width: 334px;
+        height: 352px;
+      }
+
       @media (max-width: 991px) {
         display: none;
       }
@@ -73,7 +80,7 @@
       max-width: 100%;
     }
 
-    &.open {  
+    &.open {
       background-color: #fff;
 
       .qa__info {
@@ -149,7 +156,7 @@
     @media (max-width: 768px) {
       font-size: 14px;
     }
-    
+
     p {
       padding: 0 48px 48px;
 
