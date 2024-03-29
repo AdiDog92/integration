@@ -87,10 +87,11 @@ document.addEventListener("DOMContentLoaded", () => {
   forms.forEach((form) => {
 
     form.addEventListener("submit", function (event) {
-      e.preventDefault();
+      event.preventDefault();
 
       const form = new FormData(event.target);
 
+      
     });
   });
 });
