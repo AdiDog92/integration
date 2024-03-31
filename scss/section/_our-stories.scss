@@ -254,6 +254,10 @@
     }
 
     @media (max-width:768px) {
+      margin: {
+        left: auto;
+        right: auto;
+      };
       font-size: 28px;
       text-align: center;
     }
@@ -270,11 +274,29 @@
       font-size: 20px;
     }
     @media (max-width: 768px) {
+      margin: 0 auto 48px;
       font-size: 18px;
       text-align: center;
     }
     .orange {
       font-weight: 700;
+    }
+
+    .text-with-border {
+      position: relative;
+      z-index: 0;
+
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: -6px;
+        right: -6px;
+        bottom:0px;
+        height: 3px;
+        background: linear-gradient(90deg, #ffd66b 0%, #ffa469 100%);
+        border-radius: 6px;
+      }
     }
   }
   .our-stories__form {

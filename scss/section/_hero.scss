@@ -9,21 +9,90 @@
   }
 
   .hero__title {
-    max-width: 586px;
-    margin: 0 auto 64px;
-    font-size: 56px;
+    margin-bottom: 48px;
     font-weight: 700;
+    font-size: 56px;
     line-height: 114%;
-    color: #46474e;
     text-align: center;
+    color: #46474e;
 
     @media (max-width: 991px) {
-      margin-bottom: 52px;
-      font-size: 32px;
-    }
-    @media (max-width: 768px) {
       margin-bottom: 32px;
-      font-size: 24px;
+      font-size: 48px;
+    }
+    @media (max-width: 991px) {
+      margin-bottom: 24px;
+      font-size: 30px;
+    }
+  }
+  .hero__description {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 528px;
+    margin: 0 auto 80px;
+    margin-bottom: 80px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 40px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      right: -88px;
+      top: -53px;
+      width: 170px;
+      height: 170px;
+      background: url("../img/print.svg") center / cover no-repeat;
+
+      @media (max-width: 991px) {
+        right: -68px;
+        top: -49px;
+      }
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+    .text-with-border {
+      position: relative;
+      z-index: 0;
+      margin-bottom: 24px;
+      font-weight: 300;
+      font-size: 36px;
+      line-height: 114%;
+      text-align: center;
+      color: #46474e;
+
+      @media (max-width: 768px) {
+        margin-bottom: 8px;
+        font-size: 23px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: -16px;
+        right: -16px;
+        bottom: 2px;
+        height: 6px;
+        background: linear-gradient(90deg, #ffd66b 0%, #ffa469 100%);
+        border-radius: 6px;
+      }
+    }
+    .small-text {
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 140%;
+      color: #46474e;
+
+      @media (max-width: 768px) {
+        font-size: 16px;
+        text-align: center;
+      }
     }
   }
   .hero__info-card-wrapper {
@@ -40,7 +109,7 @@
   .hero__info-card {
     position: relative;
     max-width: 344px;
-    padding: 45px 32px;
+    padding: 32px;
     border-radius: 24px;
     background: #fff;
     overflow: hidden;
@@ -69,8 +138,8 @@
       &::before {
         right: 0;
         top: 15px;
-        width: 91px;
-        height: 130px;
+        width: 89px;
+        height: 103px;
         background: url("../img/heroCard-1.svg") center / cover no-repeat;
       }
     }
@@ -79,69 +148,24 @@
       &::before {
         top: 10px;
         right: 0;
-        width: 120px;
-        height: 139px;
+        width: 89px;
+        height: 108px;
         background: url("../img/heroCard-2.svg") center / cover no-repeat;
       }
     }
 
     &--3 {
       &::before {
-        top: 15px;
+        bottom: 0px;
         right: 30px;
-        width: 76px;
-        height: 133px;
+        width: 59px;
+        height: 105px;
         background: url("../img/heroCard-3.svg") center / cover no-repeat;
       }
     }
   }
   .hero__card-text {
-    max-width: 220px;
-    font-size: 19px;
-    font-weight: 300;
-    line-height: 114%;
-    color: #46474e;
-    b {
-      font-weight: 700;
-    }
-  }
-  .hero__text {
-    position: relative;
-    z-index: 1;
-    max-width: 528px;
-    margin: 0 auto 40px;
-    font-size: 48px;
-    font-weight: 200;
-    line-height: 114%;
-    text-align: center;
-    color: #46474e;
-
-    &::before {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      right: -98px;
-      top: -36px;
-      width: 180px;
-      height: 180px;
-      background: url("../img/print.svg") center / cover no-repeat;
-
-      @media (max-width: 991px) {
-        right: -68px;
-        top: -49px;
-      }
-      @media (max-width: 768px) {
-        display: none;
-      }
-    }
-
-    @media (max-width: 991px) {
-      margin-bottom: 28px;
-      font-size: 32px;
-    }
-    @media (max-width: 768px) {
-      font-size: 24px;
-    }
+    margin: 0;
   }
   .hero__button {
     display: block;

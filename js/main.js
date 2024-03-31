@@ -1,3 +1,28 @@
+function postAjax(url, data, success) {
+  var params =
+    typeof data == "string"
+      ? data
+      : Object.keys(data)
+        .map(function (k) {
+          return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
+        })
+        .join("&");
+
+  var xhr = window.XMLHttpRequest
+    ? new XMLHttpRequest()
+    : new ActiveXObject("Microsoft.XMLHTTP");
+  xhr.open("POST", url);
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState > 3 && xhr.status == 200) {
+      success(xhr.responseText);
+    }
+  };
+  xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  xhr.send(params);
+  return xhr;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   // set iframe
   const cardImages = document.querySelectorAll(".our-stories__card-img");
@@ -80,18 +105,50 @@ document.addEventListener("DOMContentLoaded", () => {
     .querySelectorAll(".work__card[data-img]")
     .forEach((card) => observer.observe(card));
 
-
-    // sendForm
+  // sendForm
   const forms = document.querySelectorAll("form");
 
   forms.forEach((form) => {
+    form.addEventListener('shown.bs.modal', () => {
+      myInput.focus()
+    })
+  })
 
+  forms.forEach((form) => {
     form.addEventListener("submit", function (event) {
       event.preventDefault();
 
-      const form = new FormData(event.target);
+      let form = new FormData(event.target);
 
-      
+      let fields = {};
+      fields["formid"] = event.target.dataset.formid;
+
+      for (const key of form.keys()) {
+        fields[key] = form.get(key);
+      }
+
+      console.log(fields);
+
+      postAjax("SendForm.php", fields, function (data) {
+        console.log(data);
+      });
     });
   });
+
+  document.querySelector('#modalForm').addEventListener('show.bs.modal', event => {
+
+    const modalTitle = document.querySelector('.modal__form-title');
+    const modalext = document.querySelector('.modal__form-text')
+
+    if (event.relatedTarget.dataset.info === 'cost') {
+      modalTitle.innerText = 'Расчитать стоимость'
+    }
+    if (event.relatedTarget.dataset.info === 'meetup') {
+      modalTitle.innerText = 'Записаться на онлайн встречу'
+    }
+    if (event.relatedTarget.dataset.info === 'callback') {
+      modalTitle.innerText = 'Заказать обратный звонок'
+    }
+  })
+
 });

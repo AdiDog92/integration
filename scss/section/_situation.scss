@@ -32,22 +32,23 @@
       }
     }
   }
-  .situations__text-wrapper {
-    width: 528px;
+  // .situations__text-wrapper {
+  //   width: 528px;
 
-    @media (max-width: 1240px) {
-      width: 398px;
-    }
+  //   @media (max-width: 1240px) {
+  //     width: 398px;
+  //   }
 
-    @media (max-width: 991px) {
-      width: 300px;
-    }
-    @media (max-width: 768px) {
-      margin: 0 auto;
-    }
-  }
+  //   @media (max-width: 991px) {
+  //     width: 300px;
+  //   }
+  //   @media (max-width: 768px) {
+  //     margin: 0 auto;
+  //   }
+  // }
   .situations__title {
-    margin-bottom: 48px;
+    max-width: 398px;
+    margin: 0 auto 48px;
     font-weight: 700;
     font-size: 48px;
     line-height: 114%;
@@ -63,7 +64,8 @@
     }
   }
   .situations__descr {
-    margin-bottom: 72px;
+    max-width: 712px;
+    margin: 0 auto 72px;
     font-weight: 300;
     font-size: 23px;
     line-height: 140%;

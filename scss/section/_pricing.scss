@@ -45,11 +45,7 @@
     overflow: hidden;
     color: #46474e;
     transition: 0.3s ease;
-
-    &:hover {
-      background-color: #4f5058;
-      color: #fff;
-    }
+    border: 1.50px solid #ffa469;
 
     @media (max-width: 991px) {
       max-width: 100%;
@@ -63,14 +59,32 @@
     }
 
     &--1 {
+      background-color: #4f5058;
+      color: #fff;
       img {
         width: 100%;
+      }
+    }
+    &--2 {
+
+      img {
+        margin-top: 32px;
+      }
+
+      .pricing__card-content {
+        margin-bottom: auto;
+      }
+    }
+    &--3 {
+      background-color: #e8e8e8;
+      img {
+        margin-top: 32px;
       }
     }
   }
 
   .pricing__card-content {
-    padding: 48px;
+    padding: 48px 48px;
     @media (max-width: 991px) {
       padding: 24px;
     }

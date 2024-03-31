@@ -15,39 +15,38 @@
 
     &::before {
       @media (max-width: 768px) {
-        
       }
     }
   }
   .about-us__title {
-    margin-bottom: 13px;
+    position: relative;
+    z-index: 1;
+    margin: 0 auto 48px;
     font-size: 48px;
     font-weight: 700;
     line-height: 1.14;
     color: #fff;
+    text-align: center;
 
     @media (max-width: 768px) {
       font-size: 32px;
     }
   }
   .about-us__description {
-    max-width: 488px;
-    margin: 0;
-    font-size: 23px;
+    max-width: 414px;
+    margin: auto 0;
     font-weight: 300;
-    line-height: 1.4;
+    font-size: 17px;
+    line-height: 160%;
     color: #fff;
 
-    @media (max-width: 991px) {
-      max-width: 100%;
-      margin-bottom: 24px;
-    }
-    @media (max-width: 991px) {
-      font-size: 18px;
-    }
-    
     b {
       font-weight: 700;
+    }
+
+    @media (max-width: 991px) {
+      margin: 0 auto ;
+      text-align: center;
     }
 
     ~ svg {
@@ -66,19 +65,56 @@
     }
   }
   .about-us__prev {
-    margin-top: auto;
+    position: relative;
+    z-index: 0;
+    margin: {
+      top: auto;
+      left: auto;
+    }
+    max-width: 416px;
+
+    @media (max-width: 991px) {
+      margin: 0 auto;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: -104px;
+      top: -149px;
+      width: 361px;
+      height: 334px;
+      background: url("../img/about-us-icon.svg") center / cover no-repeat;
+
+      @media (max-width: 991px) {
+        left: -94px;
+        top: -109px;
+        width: 300px;
+        height: 270px;
+      }
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
   }
   .about-us__img {
-    margin-bottom: 47px;
     border-radius: 20px;
     object-fit: contain;
     overflow: hidden;
   }
   .about-us__prev-description {
+    margin: 71px auto 0;
+    font-weight: 200;
     font-size: 36px;
-    font-weight: 100;
-    line-height: 1.14;
+    line-height: 114%;
+    text-align: center;
     color: #fff;
+
+    @media (max-width: 991px) {
+      margin-top: 32px;
+    }
 
     @media (max-width: 768px) {
       font-size: 24px;
