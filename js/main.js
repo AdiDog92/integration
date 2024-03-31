@@ -24,6 +24,7 @@ function postAjax(url, data, success) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+
   // set iframe
   const cardImages = document.querySelectorAll(".our-stories__card-img");
 
@@ -105,17 +106,46 @@ document.addEventListener("DOMContentLoaded", () => {
     .querySelectorAll(".work__card[data-img]")
     .forEach((card) => observer.observe(card));
 
-  // sendForm
+  // inputmask
+  const selectors = document.querySelectorAll("input[type='tel']");
+  let inputMask = new Inputmask("+7 (999) 999-99-99");
+  inputMask.mask(selectors);
+
   const forms = document.querySelectorAll("form");
 
-  forms.forEach((form) => {
-    form.addEventListener('shown.bs.modal', () => {
-      myInput.focus()
-    })
-  })
+  // Валидация формы
 
-  forms.forEach((form) => {
-    form.addEventListener("submit", function (event) {
+  forms.forEach(elm => {
+    let validation = new JustValidate(elm, {
+      errorLabelStyle: {
+        marginTop: '-16px',
+        marginBottom: '24px',
+        fontSize: '13px',
+        color: 'red',
+      }
+    });
+
+    const formInput = elm.querySelector('input[type="tel"]');
+
+    validation.addField(formInput, [
+      {
+        validator: (value) => {
+          const phone = formInput.inputmask.unmaskedvalue();
+          return Boolean(Number(phone) && phone.length > 0)
+        },
+        errorMessage: 'Введите телефон'
+      },
+      {
+        validator: (value) => {
+          const phone = formInput.inputmask.unmaskedvalue();
+          return Boolean(Number(phone) && phone.length == 10)
+        },
+        errorMessage: 'Неверный телефон'
+      },
+    ])
+
+    // Отправка формы
+    elm.addEventListener("submit", function (event) {
       event.preventDefault();
 
       let form = new FormData(event.target);
@@ -127,18 +157,19 @@ document.addEventListener("DOMContentLoaded", () => {
         fields[key] = form.get(key);
       }
 
-      console.log(fields);
-
       postAjax("SendForm.php", fields, function (data) {
-        console.log(data);
+        console.log(data)
+        setTimeout(() => {
+          event.target.reset();
+        }, 1000)
       });
     });
-  });
+  })
 
+  // Динамический заголовок формы
   document.querySelector('#modalForm').addEventListener('show.bs.modal', event => {
 
     const modalTitle = document.querySelector('.modal__form-title');
-    const modalext = document.querySelector('.modal__form-text')
 
     if (event.relatedTarget.dataset.info === 'cost') {
       modalTitle.innerText = 'Расчитать стоимость'
@@ -150,5 +181,4 @@ document.addEventListener("DOMContentLoaded", () => {
       modalTitle.innerText = 'Заказать обратный звонок'
     }
   })
-
 });

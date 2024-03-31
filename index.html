@@ -552,8 +552,8 @@
             </p>
             <form class="our-stories__form" data-formid="form7080295">
               <div class="mb-3">
-                <input type="tel" class="our-stories__form-control form-control" placeholder="Введите ваш телефон"
-                  name="phone" required />
+                <input type="tel" minlength="11" class="our-stories__form-control form-control" placeholder="Введите ваш телефон"
+                  name="phone"/>
               </div>
               <button type="submit" class="our-stories__form-submit blicked btn-blicked">
                 Получить скидку
@@ -897,9 +897,9 @@
                       это бесплатно и ни к чему Вас не обязывает!
                     </p>
                   </div>
-                  <form class="results__form">
+                  <form class="results__form" data-formid="form7080295">
                     <div class="">
-                      <input type="tel" class="results__form-control form-control" placeholder="Введите ваш телефон"
+                      <input type="tel" minlength="11" class="results__form-control form-control" placeholder="Введите ваш телефон"
                         name="phone" required />
                     </div>
                     <button type="submit" class="results__form-submit btn-blicked blicked">
@@ -1075,9 +1075,9 @@
               или бесплатные
               <span class="orange">часы техподдержки</span> в&nbsp;подарок!
             </p>
-            <form class="choice__form">
+            <form class="choice__form" data-formid="form7080295">
               <div class="mb-3">
-                <input type="tel" class="choice__form-control form-control" placeholder="Введите ваш телефон"
+                <input type="tel" minlength="11" class="choice__form-control form-control" placeholder="Введите ваш телефон"
                   name="phone" required />
               </div>
               <button type="submit" class="choice__form-submit btn-blicked blicked">
@@ -1231,9 +1231,9 @@
               и&nbsp;разбор процессов в&nbsp;вашем бизнесе от&nbsp;опытного
               бизнес-аналитика
             </p>
-            <form class="service__form">
+            <form class="service__form" data-formid="form7080295">
               <div class="mb-3">
-                <input type="tel" class="service__form-control form-control" placeholder="Введите ваш телефон"
+                <input type="tel" minlength="11" class="service__form-control form-control" placeholder="Введите ваш телефон"
                   name="phone" required />
               </div>
               <div class="service__button-wrapper">
@@ -1383,9 +1383,9 @@
                     Вас не обязывает!
                   </p>
                 </div>
-                <form class="pricing__form">
+                <form class="pricing__form" data-formid="form7080295">
                   <div class="">
-                    <input type="tel" class="pricing__form-control form-control" placeholder="Введите ваш телефон"
+                    <input type="tel" minlength="11" class="pricing__form-control form-control" placeholder="Введите ваш телефон"
                       name="phone" required />
                   </div>
                   <button type="submit" class="pricing__form-submit blicked btn-blicked">
@@ -1507,9 +1507,9 @@
               Получите первые результаты сразу&nbsp;после внедренияи настройки
               CRM-системы Битрикс24
             </p>
-            <form class="get__form">
+            <form class="get__form" data-formid="form7080295">
               <div class="mb-3">
-                <input type="tel" class="get__form-control form-control" placeholder="Введите ваш телефон" name="phone"
+                <input type="tel" minlength="11" class="get__form-control form-control" placeholder="Введите ваш телефон" name="phone"
                   required />
               </div>
               <button type="submit" class="get__form-submit blicked btn-blicked">
@@ -1632,7 +1632,7 @@
               <div class="work__card work__card--7">
                 <div class="work__card-number">07</div>
                 <div class="work__card-text">
-                  <h3 class="subtitle">Сопровождение от бизнес-аналитика</h3>
+                  <h3 class="subtitle">Сопровождение от бизнес-аналитика</h3>
                   <p class="description">
                     На еженедельных онлайн встречах обсуждается работа вашей
                     CRM-системы, собираются пожелания по доработке и даются
@@ -1670,9 +1670,9 @@
                 Получайте до 40% больше продаж за счет настройки эффективных
                 каналов маркетинга и улучшения работы сотрудников
               </p>
-              <form class="work__form">
+              <form class="work__form" data-formid="form7080295">
                 <div class="mb-3">
-                  <input type="tel" class="work__form-control form-control" placeholder="Введите ваш телефон"
+                  <input type="tel" minlength="11" class="work__form-control form-control" placeholder="Введите ваш телефон"
                     name="phone" required />
                 </div>
                 <div class="work__button-wrapper">
@@ -2000,9 +2000,9 @@
               Вас не обязывает!
             </p>
           </div>
-          <form class="modal__form">
+          <form class="modal__form" data-formid="form7080295">
             <div class="">
-              <input type="tel" class="modal__form-control form-control" placeholder="Введите ваш телефон" name="phone"
+              <input type="tel" minlength="11" class="modal__form-control form-control" placeholder="Введите ваш телефон" name="phone"
                 required="" />
             </div>
             <button type="submit" class="modal__form-submit blicked btn-blicked">
@@ -2022,9 +2022,9 @@
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/inputmask.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 
