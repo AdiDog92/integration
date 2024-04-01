@@ -1,7 +1,10 @@
 <?php
+
+print_r($_REQUEST) ;
+return;
 class SendForm
 {
-    private static string $webHook = 'https://kiselevgroup.bitrix24.ru/rest/5625/otay8ok3ndoqkeus/';
+    const API_KEY = 'https://kiselevgroup.bitrix24.ru/rest/5625/sx44e3i9817b34u9/';
 
     /**
      * @param $request
@@ -59,7 +62,7 @@ class SendForm
      */
     private static function webHookExecuteREST($method, $params)
     {
-        $queryUrl = self::$webHook . $method . '.json';
+        $queryUrl = self::API_KEY . $method . '.json';
         $queryData = http_build_query($params);
         $curl = curl_init($queryUrl);
         curl_setopt_array($curl, array(

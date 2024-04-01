@@ -341,9 +341,15 @@
     width: 100%;
     margin-bottom: 16px;
     padding: 24px 31px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #46474e;
     border-radius: 12px;
     background: #ffd66b;
-    color: #46474e;
   }
   .pricing__policy-label {
     position: relative;

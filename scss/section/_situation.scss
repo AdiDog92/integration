@@ -8,15 +8,15 @@
   }
   .situations__inner {
     position: relative;
-    padding: 192px 96px 96px;
+    padding: 96px;
     border-radius: 32px;
     background: #46474e;
 
     @media (max-width: 1240px) {
-      padding: 126px 62px 62px;
+      padding: 62px;
     }
     @media (max-width: 991px) {
-      padding: 63px 32px 32px;
+      padding: 32px;
     }
     @media (max-width: 768px) {
       padding: 32px 16px 32px;
@@ -32,20 +32,6 @@
       }
     }
   }
-  // .situations__text-wrapper {
-  //   width: 528px;
-
-  //   @media (max-width: 1240px) {
-  //     width: 398px;
-  //   }
-
-  //   @media (max-width: 991px) {
-  //     width: 300px;
-  //   }
-  //   @media (max-width: 768px) {
-  //     margin: 0 auto;
-  //   }
-  // }
   .situations__title {
     max-width: 398px;
     margin: 0 auto 48px;
@@ -83,8 +69,8 @@
   }
   .situations__img {
     position: absolute;
-    top: 56px;
-    right: 82px;
+    bottom: 0px;
+    right: 131px;
     width: 607px;
 
     @media (max-width: 1240px) {
@@ -93,7 +79,7 @@
     }
 
     @media (max-width: 991px) {
-      top: 0;
+      bottom: 0;
       width: 371px;
     }
 
@@ -102,9 +88,9 @@
     }
   }
   .situations__list-row {
-    padding: 104px;
+    padding: 104px 104px 56px;
     border-radius: 24px;
-    background: #585960;
+    background: #393a3f;
 
     @media (max-width: 1240px) {
       padding: 43px;
@@ -120,11 +106,22 @@
   .situations__list {
     padding: 0;
     margin: 0;
+    flex-direction: column;
+    max-height: 754px;
 
     &:not(:last-child) {
       @media (max-width: 768px) {
         margin-bottom: 24px;
       }
+    }
+
+    @media (max-width: 991px) {
+      max-height: 518px;
+    }
+
+    @media (max-width: 768px) {
+      max-height: 100%;
+      flex-direction: row;
     }
   }
   .situations__item {
@@ -136,8 +133,8 @@
     line-height: 140%;
     color: #fff;
 
-    @media (max-width:768px) {
-      font-size: 16px;
+    @media (max-width:991px) {
+      font-size: 15px;
     }
 
     &:not(:last-child) {

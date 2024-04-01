@@ -127,28 +127,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const formInput = elm.querySelector('input[type="tel"]');
 
-    validation.addField(formInput, [
-      {
-        validator: (value) => {
-          const phone = formInput.inputmask.unmaskedvalue();
-          return Boolean(Number(phone) && phone.length > 0)
-        },
-        errorMessage: 'Введите телефон'
-      },
-      {
-        validator: (value) => {
-          const phone = formInput.inputmask.unmaskedvalue();
-          return Boolean(Number(phone) && phone.length == 10)
-        },
-        errorMessage: 'Неверный телефон'
-      },
-    ])
-
     // Отправка формы
-    elm.addEventListener("submit", function (event) {
+
+    elm.addEventListener("submit", async function (event) {
       event.preventDefault();
 
       let form = new FormData(event.target);
+      form.set('formid', event.target.dataset.formid);
 
       let fields = {};
       fields["formid"] = event.target.dataset.formid;
@@ -157,8 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
         fields[key] = form.get(key);
       }
 
-      postAjax("SendForm.php", fields, function (data) {
-        console.log(data)
+      postAjax("SendForm.php", response, function (data) {
         setTimeout(() => {
           event.target.reset();
         }, 1000)
@@ -170,26 +154,20 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector('#modalForm').addEventListener('show.bs.modal', event => {
 
     const modalTitle = document.querySelector('.modal__form-title');
+    const modalSubmit = document.querySelector('.modal__form-submit');
+
 
     if (event.relatedTarget.dataset.info === 'cost') {
       modalTitle.innerText = 'Расчитать стоимость'
+      modalSubmit.innerText = 'Расчитать стоимость'
     }
     if (event.relatedTarget.dataset.info === 'meetup') {
       modalTitle.innerText = 'Записаться на онлайн встречу'
+      modalSubmit.innerText = 'Записаться на встречу'
     }
     if (event.relatedTarget.dataset.info === 'callback') {
       modalTitle.innerText = 'Заказать обратный звонок'
+      modalSubmit.innerText = 'Заказать звонок'
     }
   })
-  // document.querySelector('#modalPolicy').addEventListener('show.bs.modal', event => {
-
-  //   const modal = document.querySelector('#modalPolicy');
-  //   const modalTitle = modal.querySelector('.modal__form-title');
-  //   console.log(modalTitle)
-
-  //   if (event.relatedTarget.dataset.info === 'policy') {
-  //     modalTitle.innerText = 'Политика конфиденциальности'
-  //   }
-
-  // })
 });

@@ -10,6 +10,7 @@
     @media (max-width: 991px) {
       padding: 32px;
     }
+
     @media (max-width: 768px) {
       padding: 32px 0;
     }
@@ -24,6 +25,7 @@
       }
     }
   }
+
   .get__list-inner {
     margin-bottom: 96px;
     padding: 96px;
@@ -34,6 +36,7 @@
       padding: 16px;
     }
   }
+
   .get__title {
     max-width: 390px;
     margin: 0 auto 88px;
@@ -47,32 +50,39 @@
       margin-bottom: 58px;
       font-size: 38px;
     }
+
     @media (max-width: 768px) {
       margin-bottom: 32px;
       font-size: 28px;
     }
   }
+
   .get__list {
     padding-left: 0;
     margin-bottom: 0;
     column-count: 2;
     column-gap: 20px;
+
     @media (max-width: 991px) {
       column-gap: 16px;
     }
+
     @media (max-width: 768px) {
       column-count: 1;
     }
   }
+
   .get__item {
     display: flex;
     align-items: flex-start;
     gap: 24px;
+
     @media (max-width: 768px) {
       gap: 8px;
       margin-bottom: 38px;
       justify-content: center;
     }
+
     &:not(:nth-child(3n)) {
       margin-bottom: 72px;
 
@@ -81,6 +91,7 @@
       }
     }
   }
+
   .get__item-icon {
     display: flex;
     align-items: center;
@@ -89,13 +100,16 @@
     width: 56px;
     border-radius: 14px;
     background-color: #f3f0f0;
+
     @media (max-width: 991px) {
       width: 48px;
     }
   }
+
   .get__item-text-content {
     max-width: 321px;
   }
+
   .get__item-subtitle {
     margin-bottom: 24px;
     font-size: 19px;
@@ -107,12 +121,14 @@
       margin-bottom: 16px;
     }
   }
+
   .get__item-description {
     margin-bottom: 0;
     font-size: 15px;
     line-height: 1.6;
     color: #46474e;
   }
+
   .get__form-inner {
     position: relative;
     padding: 71px;
@@ -137,11 +153,19 @@
       width: 584px;
       height: 594px;
       background: url("../img/dmitri.png") center / contain no-repeat;
+
+      @media (max-width: 1140px) {
+        right: -51px;
+        width: 489px;
+        height: 495px;
+      }
+
       @media (max-width: 991px) {
         bottom: -3px;
-        width: 394px;
-        height: 407px;
+        width: 353px;
+        height: 364px;
       }
+
       @media (max-width: 768px) {
         bottom: 0px;
         width: 332px;
@@ -158,9 +182,11 @@
       height: 1100px;
       background-color: #ffd66b;
       transform: rotate(13deg);
+
       @media (max-width: 991px) {
         width: 385px;
       }
+
       @media (max-width: 768px) {
         top: 320px;
         transform: rotate(51deg);
@@ -169,6 +195,8 @@
   }
 
   .get__form-title {
+    position: relative;
+    z-index: 1;
     max-width: 544px;
     margin-bottom: 48px;
     font-weight: 200;
@@ -180,11 +208,13 @@
       margin-bottom: 30px;
       font-size: 36px;
     }
+
     @media (max-width: 768px) {
       margin: {
         left: auto;
         right: auto;
       }
+
       font-size: 28px;
       text-align: center;
     }
@@ -202,11 +232,13 @@
       margin-bottom: 30px;
       font-size: 18px;
     }
+
     @media (max-width: 768px) {
       margin: {
         left: auto;
         right: auto;
       }
+
       font-size: 16px;
       text-align: center;
     }
@@ -215,6 +247,7 @@
       font-weight: 700;
     }
   }
+
   .get__form {
     max-width: 284px;
 
@@ -222,6 +255,7 @@
       max-width: 100%;
     }
   }
+
   .get__form-control {
     width: 100%;
     height: 72px;
@@ -244,6 +278,7 @@
       text-align: center;
     }
   }
+
   .get__form-submit {
     padding: 31px 73px;
     border-radius: 12px;
