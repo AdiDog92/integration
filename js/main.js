@@ -181,4 +181,15 @@ document.addEventListener("DOMContentLoaded", () => {
       modalTitle.innerText = 'Заказать обратный звонок'
     }
   })
+  // document.querySelector('#modalPolicy').addEventListener('show.bs.modal', event => {
+
+  //   const modal = document.querySelector('#modalPolicy');
+  //   const modalTitle = modal.querySelector('.modal__form-title');
+  //   console.log(modalTitle)
+
+  //   if (event.relatedTarget.dataset.info === 'policy') {
+  //     modalTitle.innerText = 'Политика конфиденциальности'
+  //   }
+
+  // })
 });

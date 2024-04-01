@@ -397,6 +397,39 @@ main {
   transition: 0.3s ease;
 }
 
+#modalPolicy .modal-content {
+  max-width: 792px;
+}
+#modalPolicy .modal-body {
+  max-width: 100%;
+}
+#modalPolicy .modal__form-top {
+  margin-bottom: 24px;
+}
+#modalPolicy .modal__form-title {
+  margin-bottom: 0px;
+}
+#modalPolicy .policy-descr {
+  font-size: 14px;
+}
+#modalPolicy .policy-title {
+  margin-bottom: 24px;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 100%;
+  color: #46474e;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  #modalPolicy .policy-title {
+    font-size: 25px;
+  }
+}
+#modalPolicy .policy-item {
+  font-size: 14px;
+  list-style: disc;
+}
+
 .header {
   margin-bottom: 80px;
 }
@@ -535,7 +568,7 @@ main {
 @media (max-width: 768px) {
   .hero .hero__description .text-with-border {
     margin-bottom: 8px;
-    font-size: 23px;
+    font-size: 21px;
   }
 }
 .hero .hero__description .text-with-border::before {
@@ -4571,4 +4604,5 @@ main {
 }
 .footer .footer__policy-link {
   padding: 13px;
+  color: #b2b2b5;
 }
