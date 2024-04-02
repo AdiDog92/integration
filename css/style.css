@@ -2502,6 +2502,7 @@ main {
 @media (max-width: 768px) {
   .choice .choice__form-inner::before {
     bottom: 0;
+    right: -28px;
     width: 442px;
     height: 349px;
   }
