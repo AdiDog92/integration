@@ -106,50 +106,6 @@ document.addEventListener("DOMContentLoaded", () => {
     .querySelectorAll(".work__card[data-img]")
     .forEach((card) => observer.observe(card));
 
-  // inputmask
-  const selectors = document.querySelectorAll("input[type='tel']");
-  let inputMask = new Inputmask("+7 (999) 999-99-99");
-  inputMask.mask(selectors);
-
-  const forms = document.querySelectorAll("form");
-
-  // Валидация формы
-
-  forms.forEach(elm => {
-    let validation = new JustValidate(elm, {
-      errorLabelStyle: {
-        marginTop: '-16px',
-        marginBottom: '24px',
-        fontSize: '13px',
-        color: 'red',
-      }
-    });
-
-    const formInput = elm.querySelector('input[type="tel"]');
-
-    // Отправка формы
-
-    elm.addEventListener("submit", async function (event) {
-      event.preventDefault();
-
-      let form = new FormData(event.target);
-      form.set('formid', event.target.dataset.formid);
-
-      let fields = {};
-      fields["formid"] = event.target.dataset.formid;
-
-      for (const key of form.keys()) {
-        fields[key] = form.get(key);
-      }
-
-      postAjax("SendForm.php", response, function (data) {
-        setTimeout(() => {
-          event.target.reset();
-        }, 1000)
-      });
-    });
-  })
-
   // Динамический заголовок формы
   document.querySelector('#modalForm').addEventListener('show.bs.modal', event => {
 
@@ -169,5 +125,64 @@ document.addEventListener("DOMContentLoaded", () => {
       modalTitle.innerText = 'Заказать обратный звонок'
       modalSubmit.innerText = 'Заказать звонок'
     }
+  })
+  
+  $('form').find('input[type="tel"]').mask("+7 (000) 000-00-00");
+
+  $.validator.addMethod(
+    "phonenumber",
+    function (value, element) {
+      return $(element).val().match(/\d/g).length == 11;
+    },
+    "Введите корректный номер телефона"
+  );
+
+  $('form').each(function () {
+    $(this).validate({
+      rules: {
+        phone: {
+          required: true,
+          phonenumber: true,
+        },
+      },
+      messages: {
+        phone: {
+          required: "Заполните все обязательные поля",
+        },
+      },
+
+      submitHandler: function (form, event) {
+        event.preventDefault();
+
+        const _form = $(form);
+        const action = _form.attr("action");
+        const phoneInput = _form.find('input[type="tel"]');
+        const formButton = _form.find('button[type="submit"]');
+        const showThanks = new bootstrap.Modal('#modalThanks', {
+          keyboard: false
+        })
+
+        _form.find(phoneInput).attr('disabled', true);
+        _form.find(formButton).attr('disabled', true);
+        showThanks.show($('#modalThanks'));
+
+        let formData = {
+          formid: String(_form.data('formid')),
+          phone: String(phoneInput.val())
+        }
+
+        $.post(action, formData, function(formData){
+          if(formData) {
+            // ym(96902318, 'reachGoal', 'zayavka');
+            _form.find(phoneInput).val('');
+            _form.find(phoneInput).attr('disabled', false);
+            _form.find(formButton).attr('disabled', false);
+          }
+        })
+      },
+      errorElement: "div",
+      errorClass: "is-invalid",
+      validClass: "is-valid",
+    })
   })
 });
