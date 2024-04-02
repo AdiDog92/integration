@@ -544,10 +544,10 @@
               </span>
               после&nbsp;составления технического задания
             </p>
-            <form class="our-stories__form" data-formid="form7080295">
+            <form class="our-stories__form" data-formid="form7080295" action='SendForm.php'>
               <div class="mb-3">
-                <input type="tel" maxlength="18" minlength="11" class="our-stories__form-control form-control"
-                  placeholder="Введите ваш телефон" name="phone" />
+                <input type="tel" class="our-stories__form-control form-control" placeholder="Введите ваш телефон"
+                  name="phone" />
               </div>
               <button type="submit" class="our-stories__form-submit blicked btn-blicked">
                 Получить скидку
@@ -891,16 +891,16 @@
                       это бесплатно и ни к чему Вас не обязывает!
                     </p>
                   </div>
-                  <form class="results__form" data-formid="form7080295">
+                  <form class="results__form" data-formid="form7080295" action='SendForm.php'>
                     <div class="">
-                      <input type="tel" maxlength="18" minlength="11" class="results__form-control form-control"
-                        placeholder="Введите ваш телефон" name="phone" required />
+                      <input type="tel" class="results__form-control form-control" placeholder="Введите ваш телефон"
+                        name="phone" />
                     </div>
                     <button type="submit" class="results__form-submit btn-blicked blicked">
                       Записаться на встречу
                     </button>
                     <label class="results__policy-label">
-                      <input type="checkbox" class="results__check" checked required />
+                      <input type="checkbox" class="results__check" name="policy" checked required />
                       <span class="results__custom-check"></span>
                       <div class="policy-text">
                         Нажимая на кнопку вы соглашаетесь с условиями
@@ -1070,10 +1070,10 @@
               или бесплатные
               <span class="orange">часы техподдержки</span> в&nbsp;подарок!
             </p>
-            <form class="choice__form" data-formid="form7080295">
+            <form class="choice__form" data-formid="form7080295" actio='SendForm.php'>
               <div class="mb-3">
-                <input type="tel" maxlength="18" minlength="11" class="choice__form-control form-control"
-                  placeholder="Введите ваш телефон" name="phone" required />
+                <input type="tel" class="choice__form-control form-control" placeholder="Введите ваш телефон"
+                  name="phone" />
               </div>
               <button type="submit" class="choice__form-submit btn-blicked blicked">
                 Получить скидку
@@ -1091,6 +1091,57 @@
             <div class="service__card">
               <div class="service__card-top">
                 <h3 class="service__card-title">
+                  Аудит вашей CRM-системы
+                </h3>
+                <ul class="service__card-list">
+                  <li class="service__card-item">
+                    Наш опытный бизнес-аналитик оценит вашу
+                    текущую систему, если она уже внедрена;
+                  </li>
+                  <li class="service__card-item">
+                    Вы получите рекомендации по улучшению
+                    CRM и стратегию ее развития;
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="service__card">
+              <div class="service__card-top">
+                <h3 class="service__card-title">
+                  Настройка <br />CRM-системы
+                </h3>
+                <ul class="service__card-list">
+                  <li class="service__card-item">
+                    На основе предварительного ТЗ мы настраиваем вашу систему
+                    для оптимальной работы;
+                  </li>
+                  <li class="service__card-item">
+                    Проводим интеграцию с мессенджерами, телефонией,
+                    социальными сетями и другими каналами коммуникаций;
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="service__card">
+              <div class="service__card-top">
+                <h3 class="service__card-title">
+                  Обучение сотрудников работе в CRM
+                </h3>
+                <ul class="service__card-list">
+                  <li class="service__card-item">
+                    Доступно 2 вида обучения: базовое владение CRM и обучение
+                    настроенной логике в системе клиента;
+                  </li>
+                  <li class="service__card-item">
+                    Сотрудники компании получат доступ к базе знаний с
+                    детальными инструкциями и уроками
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="service__card">
+              <div class="service__card-top">
+                <h3 class="service__card-title">
                   Техническое <br />
                   задание
                 </h3>
@@ -1113,16 +1164,16 @@
             <div class="service__card">
               <div class="service__card-top">
                 <h3 class="service__card-title">
-                  Настройка <br />CRM-системы
+                  Индивидуальная <br /> разработка
                 </h3>
                 <ul class="service__card-list">
                   <li class="service__card-item">
-                    На основе предварительного ТЗ мы настраиваем вашу систему
-                    для оптимальной работы;
+                    Разрабатываем интеграции с вашими сайтами,
+                    приложениями и сервисами;
                   </li>
                   <li class="service__card-item">
-                    Проводим интеграцию с мессенджерами, телефонией,
-                    социальными сетями и другими каналами коммуникаций;
+                    Создаем кастомные отчеты и приложения для
+                    уникальной логики бизнес-процессов.
                   </li>
                 </ul>
               </div>
@@ -1134,86 +1185,62 @@
             <div class="service__card">
               <div class="service__card-top">
                 <h3 class="service__card-title">
-                  Обучение сотрудников работе в CRM
+                  Сопровождение и улучшение CRM
                 </h3>
-                <ul class="service__card-list">
-                  <li class="service__card-item">
-                    Доступно 2 вида обучения: базовое владение CRM и обучение
-                    настроенной логике в системе клиента;
-                  </li>
-                  <li class="service__card-item">
-                    Сотрудники компании получат доступ к базе знаний с
-                    детальными инструкциями и уроками
-                  </li>
-                </ul>
-              </div>
-              <div class="service__card-term">
-                <span class="icon"></span>
-                <span class="text">7-14 дней</span>
+                <div class="service__card-list">
+                  Для каждого клиента мы проводим еженедельные
+                  встречи с бизнес-аналитиком для анализа системы
+                  и обсуждения доработок, после чего рекомендации
+                  передаются в технический отдел для реализации.
+                </div>
               </div>
             </div>
             <div class="service__card">
               <div class="service__card-top">
                 <h3 class="service__card-title">
-                  Техническое <br />
-                  задание
+                  Техническая <br> поддержка
                 </h3>
                 <ul class="service__card-list">
                   <li class="service__card-item">
-                    Прорабатывается логика связи «Битрикс24» с сервисами 1С, а
-                    также сайтами и приложениями;
+                    Доступны выгодные «пакеты» по 10, 20,
+                    40 или 60 часов, а также заказ от 1 часа;
                   </li>
                   <li class="service__card-item">
-                    В ТЗ описываются все кастомные интеграции и доработки в
-                    понятном виде для дальнейшей настройки системы;
+                    Часы не сгорают и используются по мере
+                    потребностей вашей компании.
                   </li>
                 </ul>
-              </div>
-              <div class="service__card-term">
-                <span class="icon"></span>
-                <span class="text">до 14 рабочих дней</span>
               </div>
             </div>
             <div class="service__card">
               <div class="service__card-top">
                 <h3 class="service__card-title">
-                  Настройка <br />CRM-системы
+                  Отдел контроля качества
                 </h3>
                 <ul class="service__card-list">
                   <li class="service__card-item">
-                    На основе предварительного ТЗ мы настраиваем вашу систему
-                    для оптимальной работы;
+                    Прослушивание звонков, анализ переписок и встреч
+                    для повышения качества работы персонала;
                   </li>
                   <li class="service__card-item">
-                    Проводим интеграцию с мессенджерами, телефонией,
-                    социальными сетями и другими каналами коммуникаций;
+                    Вы получаете еженедельные отчеты и рекомендации
+                    с расшифровкой каждого диалога для улучшения
+                    бизнес-процессов в вашей компании.
                   </li>
                 </ul>
-              </div>
-              <div class="service__card-term">
-                <span class="icon"></span>
-                <span class="text">до 1-3 мес</span>
               </div>
             </div>
             <div class="service__card">
               <div class="service__card-top">
                 <h3 class="service__card-title">
-                  Обучение сотрудников работе в CRM
+                  Покупка и продление лицензий
+                  «Битрикс24»
                 </h3>
-                <ul class="service__card-list">
-                  <li class="service__card-item">
-                    Доступно 2 вида обучения: базовое владение CRM и обучение
-                    настроенной логике в системе клиента;
-                  </li>
-                  <li class="service__card-item">
-                    Сотрудники компании получат доступ к базе знаний с
-                    детальными инструкциями и уроками
-                  </li>
-                </ul>
-              </div>
-              <div class="service__card-term">
-                <span class="icon"></span>
-                <span class="text">7-14 дней</span>
+                <div class="service__card-list">
+                  Приобретая лицензию через нас, вы получаете
+                  скидку на настройку системы или бесплатные
+                  часы технической поддержки от нас.
+                </div>
               </div>
             </div>
           </div>
@@ -1226,10 +1253,10 @@
               и&nbsp;разбор процессов в&nbsp;вашем бизнесе от&nbsp;опытного
               бизнес-аналитика
             </p>
-            <form class="service__form" data-formid="form7080295">
+            <form class="service__form" data-formid="form7080295" action='SendForm.php'>
               <div class="mb-3">
-                <input type="tel" maxlength="18" minlength="11" class="service__form-control form-control"
-                  placeholder="Введите ваш телефон" name="phone" required />
+                <input type="tel" class="service__form-control form-control" placeholder="Введите ваш телефон"
+                  name="phone" />
               </div>
               <div class="service__button-wrapper">
                 <button type="submit" class="service__form-submit">
@@ -1378,16 +1405,16 @@
                     Вас не обязывает!
                   </p>
                 </div>
-                <form class="pricing__form" data-formid="form7080295">
+                <form class="pricing__form" data-formid="form7080295" action='SendForm.php'>
                   <div class="">
-                    <input type="tel" maxlength="18" minlength="11" class="pricing__form-control form-control"
-                      placeholder="Введите ваш телефон" name="phone" required />
+                    <input type="tel" class="pricing__form-control form-control" placeholder="Введите ваш телефон"
+                      name="phone" />
                   </div>
                   <button type="submit" class="pricing__form-submit blicked btn-blicked">
                     Записаться на встречу
                   </button>
                   <label class="pricing__policy-label">
-                    <input type="checkbox" class="pricing__check" checked required />
+                    <input type="checkbox" class="pricing__check" name="policy" checked required />
                     <span class="pricing__custom-check"></span>
                     <div class="policy-text">
                       Нажимая на кнопку вы соглашаетесь с условиями
@@ -1503,10 +1530,10 @@
               Получите первые результаты сразу&nbsp;после внедренияи настройки
               CRM-системы Битрикс24
             </p>
-            <form class="get__form" data-formid="form7080295">
+            <form class="get__form" data-formid="form7080295" action='SendForm.php'>
               <div class="mb-3">
-                <input type="tel" maxlength="18" minlength="11" class="get__form-control form-control"
-                  placeholder="Введите ваш телефон" name="phone" required />
+                <input type="tel" class="get__form-control form-control" placeholder="Введите ваш телефон"
+                  name="phone" />
               </div>
               <button type="submit" class="get__form-submit blicked btn-blicked">
                 Автоматизировать бизнес
@@ -1666,10 +1693,10 @@
                 Получайте до 40% больше продаж за счет настройки эффективных
                 каналов маркетинга и улучшения работы сотрудников
               </p>
-              <form class="work__form" data-formid="form7080295">
+              <form class="work__form" data-formid="form7080295" actio='SendForm.php'>
                 <div class="mb-3">
-                  <input type="tel" maxlength="18" minlength="11" class="work__form-control form-control"
-                    placeholder="Введите ваш телефон" name="phone" required />
+                  <input type="tel" class="work__form-control form-control" placeholder="Введите ваш телефон"
+                    name="phone" />
                 </div>
                 <div class="work__button-wrapper">
                   <button type="submit" class="work__form-submit">
@@ -1997,16 +2024,16 @@
               Вас не обязывает!
             </p>
           </div>
-          <form class="modal__form" data-formid="form7080295">
-            <div class="">
-              <input type="tel" maxlength="18" minlength="11" class="modal__form-control form-control"
-                placeholder="Введите ваш телефон" name="phone" required="" />
+          <form class="modal__form" data-formid="form7080295" action='SendForm.php'>
+            <div class="md-3">
+              <input type="tel" class="modal__form-control form-control" placeholder="Введите ваш телефон"
+                name="phone" />
             </div>
             <button type="submit" class="modal__form-submit blicked btn-blicked">
               заказать обратный звонок
             </button>
             <label class="modal__policy-label">
-              <input type="checkbox" class="modal__check" checked="" required="" />
+              <input type="checkbox" class="modal__check" name="policy" checked="" required="" />
               <span class="modal__custom-check"></span>
               <div class="policy-text">
                 Нажимая на кнопку вы соглашаетесь с условиями
@@ -2115,10 +2142,25 @@
       </div>
     </div>
   </div>
+  <div class="modal fade" id="modalThanks" tabindex="-1" aria-labelledby="modalThanks" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <div class="modal-body">
+          <div class="thanks">Спасибо за заявку</div>
+          <div class="info">Наши менеджеры свяжутся с Вами в ближайшее время</div>
+        </div>
+      </div>
+    </div>
+  </div>  
 
-  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/additional-methods.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/inputmask.min.js"></script>
+  <script src="js/jquery.mask.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 

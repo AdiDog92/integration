@@ -1,11 +1,14 @@
 .situations {
   margin-bottom: 190px;
+
   @media (max-width: 991px) {
     margin-bottom: 108px;
   }
+
   @media (max-width: 768px) {
     margin-bottom: 98px;
   }
+
   .situations__inner {
     position: relative;
     padding: 96px;
@@ -15,9 +18,11 @@
     @media (max-width: 1240px) {
       padding: 62px;
     }
+
     @media (max-width: 991px) {
       padding: 32px;
     }
+
     @media (max-width: 768px) {
       padding: 32px 16px 32px;
     }
@@ -32,6 +37,7 @@
       }
     }
   }
+
   .situations__title {
     max-width: 398px;
     margin: 0 auto 48px;
@@ -45,10 +51,12 @@
       margin-bottom: 36px;
       font-size: 36px;
     }
+
     @media (max-width: 991px) {
       font-size: 28px;
     }
   }
+
   .situations__descr {
     max-width: 712px;
     margin: 0 auto 72px;
@@ -62,16 +70,18 @@
       margin-bottom: 38px;
       font-size: 18px;
     }
+
     @media (max-width: 768px) {
       margin-bottom: 24px;
       font-size: 16px;
     }
   }
+
   .situations__img {
     position: absolute;
     bottom: 0px;
     right: 131px;
-    width: 607px;
+    width: 508px;
 
     @media (max-width: 1240px) {
       width: 526px;
@@ -87,6 +97,7 @@
       display: none;
     }
   }
+
   .situations__list-row {
     padding: 104px 104px 56px;
     border-radius: 24px;
@@ -100,9 +111,12 @@
       padding: {
         left: 16px;
         right: 16px;
-      };
+      }
+
+      ;
     }
   }
+
   .situations__list {
     padding: 0;
     margin: 0;
@@ -124,6 +138,7 @@
       flex-direction: row;
     }
   }
+
   .situations__item {
     display: flex;
     align-items: flex-start;
@@ -139,10 +154,12 @@
 
     &:not(:last-child) {
       margin-bottom: 48px;
+
       @media (max-width: 991px) {
         margin-bottom: 32px;
       }
     }
+
     .icon {
       flex-shrink: 0;
       display: inline-block;
@@ -150,8 +167,10 @@
       height: 24px;
       background: url("../img/situation-list-icon.svg") center / cover no-repeat;
     }
+
     .text {
       max-width: 336px;
+
       b {
         font-weight: 700;
       }

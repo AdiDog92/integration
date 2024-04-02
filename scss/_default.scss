@@ -261,12 +261,15 @@
   .modal-content {
     max-width: 792px;
   }
+
   .modal-body {
     max-width: 100%;
   }
+
   .modal__form-top {
     margin-bottom: 24px;
   }
+
   .modal__form-title {
     margin-bottom: 0px;
   }
@@ -292,4 +295,27 @@
     font-size: 14px;
     list-style: disc;
   }
+}
+
+#modalThanks {
+  .thanks {
+    margin-bottom: 38px;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 100%;
+    text-align: center;
+    color: #46474e;
+  }
+
+  .info {
+    font-weight: 300;
+    font-size: 23px;
+    color: #46474e;
+    text-align: center;
+  }
+}
+
+.is-invalid {
+  margin-top: -16px;
+  margin-bottom: 24px;
 }
