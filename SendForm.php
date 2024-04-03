@@ -1,7 +1,5 @@
 <?php
 
-print_r($_POST) ;
-return;
 class SendForm
 {
     const API_KEY = 'https://kiselevgroup.bitrix24.ru/rest/5625/sx44e3i9817b34u9/';
@@ -12,6 +10,8 @@ class SendForm
      */
     public static function init($request)
     {
+    // self::writeToLog($request);
+    // die();
 		switch ($request['formid']) {
 			case 'form7080295':
 				self::webHookExecuteREST('crm.lead.add', [
@@ -30,10 +30,13 @@ class SendForm
 								'VALUE_TYPE' => 'WORK',
 							]
 						],
+            'UTM_CAMPAIGN' => $request['utm_campaign'],
+            'UTM_CONTENT' => $request['utm_content'],
+            'UTM_MEDIUM' => $request['utm_medium'],
+            'UTM_SOURCE' => $request['utm_source'],
+            'UTM_TERM' => $request['utm_term'],
 					]
 				]);
-        // echo "true";
-        // exit();
 				break;
 			default:
 				// header('HTTP/1.1 403 Forbidden');
@@ -78,3 +81,4 @@ class SendForm
 }
 
 SendForm::init($_REQUEST);
+echo 'true';

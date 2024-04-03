@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
       modalSubmit.innerText = 'Заказать звонок'
     }
   })
-  
+
   $('form').find('input[type="tel"]').mask("+7 (000) 000-00-00");
 
   $.validator.addMethod(
@@ -164,16 +164,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
         _form.find(phoneInput).attr('disabled', true);
         _form.find(formButton).attr('disabled', true);
-        showThanks.show($('#modalThanks'));
 
         let formData = {
           formid: String(_form.data('formid')),
-          phone: String(phoneInput.val())
+          phone: String(phoneInput.val()),
         }
 
-        $.post(action, formData, function(formData){
-          if(formData) {
+        formData['utm_source'] = String(new URLSearchParams(window.location.search).get('utm_source'));
+        formData['utm_medium'] = new URLSearchParams(window.location.search).get('utm_medium');
+        formData['utm_campaign'] = new URLSearchParams(window.location.search).get('utm_campaign');
+        formData['utm_content'] = new URLSearchParams(window.location.search).get('utm_content');
+        formData['utm_term'] = new URLSearchParams(window.location.search).get('utm_term');
+
+        $.post(action, formData, function (data) {
+          if (data == 'true') {
+
             // ym(96902318, 'reachGoal', 'zayavka');
+
+            showThanks.show($('#modalThanks'));
             _form.find(phoneInput).val('');
             _form.find(phoneInput).attr('disabled', false);
             _form.find(formButton).attr('disabled', false);
