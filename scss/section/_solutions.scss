@@ -173,6 +173,7 @@
     display: flex;
     align-items: flex-start;
     gap: 18px;
+    color: #46474f;
 
     &:not(:last-child) {
       margin-bottom: 48px;
@@ -203,14 +204,17 @@
     margin: 0 auto;
   }
 
-  .solutions__meetup-content {}
-
   .solutions__meetup-text {
     margin-bottom: 72px;
     font-weight: 700;
     font-size: 32px;
     line-height: 114%;
     color: #46474e;
+    
+    @media (max-width: 991px) {
+      margin-bottom: 38px;
+      text-align: center;
+    }
 
     @media (max-width: 768px) {
       font-size: 24px;
@@ -231,6 +235,10 @@
     text-transform: uppercase;
     text-align: center;
     color: #61504d;
+
+    @media (max-width: 991px) {
+      margin: 0 auto;
+    }
 
     @media (max-width: 768px) {
       width: 100%;

@@ -75,7 +75,7 @@
   .get__item {
     display: flex;
     align-items: flex-start;
-    gap: 24px;
+    gap: 32px;
 
     @media (max-width: 768px) {
       gap: 8px;

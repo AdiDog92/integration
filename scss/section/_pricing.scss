@@ -1,10 +1,11 @@
 .pricing {
   margin-bottom: 96px;
+
   .pricing__title {
     display: flex;
     flex-direction: column;
     max-width: 1079px;
-    margin: 0 auto 129px;
+    margin: 0 auto 48px;
     font-weight: 700;
     font-size: 48px;
     line-height: 114%;
@@ -12,27 +13,44 @@
     color: #46474e;
 
     @media (max-width: 991px) {
-      margin: 0 auto 93px;
+      margin: 0 auto 32px;
       font-size: 32px;
     }
 
     @media (max-width: 768px) {
       font-size: 28px;
     }
-    .gray {
-      color: #8f8f92;
+  }
+
+  .pricing__question {
+    margin-bottom: 72px;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 114%;
+    color: #46474F;
+    text-align: center;
+    @media (max-width: 991px) {
+      margin-bottom: 38px;
+      font-size: 28px;
+    }
+    @media (max-width: 768px) {
+      font-size: 21px;
     }
   }
+
   .pricing__card-row {
-    margin-bottom: 169px;
+    margin-bottom: 144px;
 
     @media (max-width: 991px) {
       margin-bottom: 72px;
     }
+
     @media (max-width: 991px) {
       margin-bottom: 36px;
     }
   }
+
   .pricing__card {
     display: flex;
     flex-direction: column;
@@ -45,7 +63,11 @@
     overflow: hidden;
     color: #46474e;
     transition: 0.3s ease;
-    border: 1.50px solid #ffa469;
+    outline-color: transparent;
+
+    &:hover {
+      outline: 1.5px solid #ffa469;
+    }
 
     @media (max-width: 991px) {
       max-width: 100%;
@@ -61,10 +83,12 @@
     &--1 {
       background-color: #4f5058;
       color: #fff;
+
       img {
         width: 100%;
       }
     }
+
     &--2 {
 
       img {
@@ -75,8 +99,10 @@
         margin-bottom: auto;
       }
     }
+
     &--3 {
       background-color: #e8e8e8;
+
       img {
         margin-top: 32px;
       }
@@ -85,23 +111,28 @@
 
   .pricing__card-content {
     padding: 48px 48px;
+
     @media (max-width: 991px) {
       padding: 24px;
     }
   }
+
   .pricing__card-title {
     margin-bottom: 32px;
     font-weight: 700;
     font-size: 23px;
     line-height: 114%;
   }
+
   .pricing__card-descr {
     margin-bottom: 0;
     font-weight: 400;
     font-size: 15px;
     line-height: 160%;
   }
+
   .pricing__founder-prev {
+    width: 638px;
     padding-top: 72px;
 
     @media (max-width: 991px) {
@@ -110,10 +141,12 @@
       padding-top: 0;
     }
   }
+
   .pricing__founder-img {
     width: 100%;
     object-fit: cover;
   }
+
   .pricing__founder-text-inner {
     position: relative;
     max-width: 527px;
@@ -130,6 +163,7 @@
     @media (max-width: 991px) {
       margin: 0 auto 24px;
     }
+
     &::before {
       content: "";
       top: 56px;
@@ -141,10 +175,12 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: 100%;
+
       @media (max-width: 991px) {
         display: none;
       }
     }
+
     &::after {
       content: "";
       position: absolute;
@@ -158,8 +194,10 @@
       background-size: 100%;
     }
   }
+
   .text {
     max-width: 415px;
+
     &:not(:last-child) {
       margin-bottom: 24px;
     }
@@ -168,10 +206,12 @@
       font-size: 14px;
     }
   }
+
   .orange-bg {
     border-radius: 8px;
     background: #fccd82;
   }
+
   .pricing__form-banner {
     position: relative;
     border-radius: 32px;
@@ -181,6 +221,7 @@
     @media (max-width: 991px) {
       padding: 32px;
     }
+
     @media (max-width: 768px) {
       padding: 32px 0;
     }
@@ -195,6 +236,7 @@
       }
     }
   }
+
   .pricing__banner-text {
     max-width: 515px;
     padding: 56px 0;
@@ -204,6 +246,7 @@
       margin: 0 auto 32px;
     }
   }
+
   .pricing__banner-title {
     margin-bottom: 61px;
     font-weight: 200;
@@ -216,11 +259,13 @@
       font-size: 32px;
       text-align: center;
     }
+
     @media (max-width: 991px) {
       margin-bottom: 32px;
       font-size: 28px;
     }
   }
+
   .pricing__banner-list {
     display: flex;
     align-items: center;
@@ -233,6 +278,7 @@
       justify-content: space-between;
     }
   }
+
   .pricing__banner-item {
     display: flex;
     flex-direction: column;
@@ -251,6 +297,7 @@
       }
     }
   }
+
   .pricing__banner-prev {
     display: flex;
     align-items: center;
@@ -268,6 +315,7 @@
       height: 100%;
     }
   }
+
   .pricing__form-inner {
     display: flex;
     flex-direction: column;
@@ -280,20 +328,24 @@
       flex-direction: row;
       padding: 16px;
     }
+
     @media (max-width: 768px) {
       flex-direction: column;
       padding: 16px;
     }
   }
+
   .pricing__fomr-top {
     max-width: 300px;
     margin: 0 auto auto;
     text-align: center;
+
     @media (max-width: 991px) {
       flex-direction: row;
       padding: 16px;
     }
   }
+
   .pricing__form-title {
     margin-bottom: 32px;
     font-weight: 500;
@@ -301,11 +353,13 @@
     line-height: 100%;
     color: #46474e;
   }
+
   .pricing__form-text {
     font-weight: 300;
     font-size: 23px;
     color: #46474e;
   }
+
   .pricing__form {
     max-width: 300px;
     margin: 0 auto;
@@ -314,6 +368,7 @@
       max-width: 100%;
     }
   }
+
   .pricing__form-control {
     margin-bottom: 24px;
     width: 100%;
@@ -333,14 +388,16 @@
       text-align: center;
       color: #b9babd;
     }
+
     &:focus {
       box-shadow: none;
     }
   }
+
   .pricing__form-submit {
     width: 100%;
     margin-bottom: 16px;
-    padding: 24px 31px;
+    padding: 29px 31px;
     font-weight: 500;
     font-size: 14px;
     line-height: 100%;
@@ -351,6 +408,7 @@
     border-radius: 12px;
     background: #ffd66b;
   }
+
   .pricing__policy-label {
     position: relative;
     display: flex;
@@ -361,6 +419,7 @@
     font-size: 11px;
     color: #8f8f92;
   }
+
   .pricing__check {
     width: 0;
     height: 0;
@@ -368,8 +427,9 @@
     opacity: 0;
 
     &:checked {
-      ~ .pricing__custom-check {
+      ~.pricing__custom-check {
         border-color: #ffa469;
+
         &::before,
         &::after {
           opacity: 1;
@@ -377,6 +437,7 @@
       }
     }
   }
+
   .pricing__custom-check {
     position: absolute;
     left: 0;
@@ -400,7 +461,7 @@
     &::after {
       content: "";
       position: absolute;
-      left: 3px;
+      left: 2.3px;
       top: -1px;
       width: 5px;
       height: 8px;

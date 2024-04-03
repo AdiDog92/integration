@@ -127,37 +127,6 @@ main {
   color: #ffa469;
 }
 
-.have-question {
-  margin-bottom: 60px;
-  font-size: 56px;
-  font-weight: 700;
-  line-height: 1.14;
-  text-align: center;
-  color: #46474e;
-}
-@media (max-width: 768px) {
-  .have-question {
-    margin-bottom: 48px;
-    font-size: 32px;
-  }
-}
-
-.contact-us {
-  margin-bottom: 105px;
-  font-size: 23px;
-  font-weight: 300;
-  font-stretch: normal;
-  line-height: 1.4;
-  text-align: center;
-  color: #46474e;
-}
-@media (max-width: 768px) {
-  .contact-us {
-    margin-bottom: 72px;
-    font-size: 18px;
-  }
-}
-
 .end::before {
   opacity: 0;
 }
@@ -448,6 +417,7 @@ main {
 .is-invalid {
   margin-top: -16px;
   margin-bottom: 24px;
+  color: #ab0008;
 }
 
 .header {
@@ -679,6 +649,14 @@ main {
 }
 .hero .hero__card-text {
   margin: 0;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 114%;
+  color: #46474F;
+}
+.hero .hero__card-text b {
+  font-weight: 700;
 }
 .hero .hero__button {
   display: block;
@@ -1078,6 +1056,7 @@ main {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 18px;
+  color: #46474f;
 }
 .solutions .solutions__item:not(:last-child) {
   margin-bottom: 48px;
@@ -1113,6 +1092,12 @@ main {
   line-height: 114%;
   color: #46474e;
 }
+@media (max-width: 991px) {
+  .solutions .solutions__meetup-text {
+    margin-bottom: 38px;
+    text-align: center;
+  }
+}
 @media (max-width: 768px) {
   .solutions .solutions__meetup-text {
     font-size: 24px;
@@ -1134,6 +1119,11 @@ main {
   text-transform: uppercase;
   text-align: center;
   color: #61504d;
+}
+@media (max-width: 991px) {
+  .solutions .solutions__button {
+    margin: 0 auto;
+  }
 }
 @media (max-width: 768px) {
   .solutions .solutions__button {
@@ -1248,7 +1238,7 @@ main {
 }
 .our-stories .our-stories__prev {
   max-width: 496px;
-  border-radius: 24px;
+  border-radius: 12px;
   overflow: hidden;
 }
 .our-stories .our-stories__card-img {
@@ -1717,7 +1707,7 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 64px 56px 149px;
+  padding: 64px 56px 196px;
   border-radius: 24px;
   background-color: #f3f0f0;
 }
@@ -2251,7 +2241,7 @@ main {
 .choice .choice__inner {
   position: relative;
   padding: 96px;
-  border-radius: 48px;
+  border-radius: 32px;
   background: #46474e;
 }
 @media (max-width: 1240px) {
@@ -2351,7 +2341,7 @@ main {
   display: -ms-flexbox;
   display: flex;
   min-height: 272px;
-  padding: 43px;
+  padding: 56px;
   border-radius: 24px;
   margin-bottom: 20px;
 }
@@ -2376,7 +2366,7 @@ main {
   }
 }
 .choice .choice__item--2 {
-  background: url("../img/choice-card-2.svg") center right/auto no-repeat, #fff;
+  background: url("../img/choice-card-2.svg") bottom right/auto no-repeat, #fff;
 }
 @media (max-width: 1100px) {
   .choice .choice__item--2 {
@@ -2402,11 +2392,11 @@ main {
   }
 }
 .choice .choice__item--4 {
-  background: url("../img/choice-card-4.svg") 90% 50%/auto no-repeat, #fff;
+  background: url("../img/choice-card-4.svg") 90% 100%/auto no-repeat, #fff;
 }
 @media (max-width: 1100px) {
   .choice .choice__item--4 {
-    background-position: 100% 50%;
+    background-position: 100% 100%;
   }
 }
 @media (max-width: 768px) {
@@ -2416,6 +2406,9 @@ main {
 }
 .choice .choice__item--5 {
   background: url("../img/choice-card-5.svg") center right/auto no-repeat, #fff;
+}
+.choice .choice__item--5 .choice__card-descr {
+  padding-right: 31px;
 }
 @media (max-width: 1100px) {
   .choice .choice__item--5 {
@@ -2555,6 +2548,20 @@ main {
   font-size: 23px;
   line-height: 140%;
   color: #fff;
+}
+.choice .choice__form-description .text-with-border {
+  position: relative;
+  z-index: 0;
+}
+.choice .choice__form-description .text-with-border::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(-1.74%, #FFD454), color-stop(101.66%, #FF9F5C)), #FFCB75;
+  background: linear-gradient(90deg, #FFD454 -1.74%, #FF9F5C 101.66%), #FFCB75;
 }
 @media (max-width: 991px) {
   .choice .choice__form-description {
@@ -2700,7 +2707,7 @@ main {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 24px;
-  margin-bottom: 48px;
+  margin-bottom: 96px;
 }
 @media (max-width: 768px) {
   .service .service__cards-wrapper {
@@ -2732,6 +2739,12 @@ main {
   background-color: #f3f0f0;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
+  border: 1px solid transparent;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.service .service__card:hover {
+  border-color: #FF9F5C;
 }
 @media (max-width: 1240px) {
   .service .service__card {
@@ -3007,7 +3020,7 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
   max-width: 1079px;
-  margin: 0 auto 129px;
+  margin: 0 auto 48px;
   font-weight: 700;
   font-size: 48px;
   line-height: 114%;
@@ -3016,7 +3029,7 @@ main {
 }
 @media (max-width: 991px) {
   .pricing .pricing__title {
-    margin: 0 auto 93px;
+    margin: 0 auto 32px;
     font-size: 32px;
   }
 }
@@ -3025,11 +3038,28 @@ main {
     font-size: 28px;
   }
 }
-.pricing .pricing__title .gray {
-  color: #8f8f92;
+.pricing .pricing__question {
+  margin-bottom: 72px;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 114%;
+  color: #46474F;
+  text-align: center;
+}
+@media (max-width: 991px) {
+  .pricing .pricing__question {
+    margin-bottom: 38px;
+    font-size: 28px;
+  }
+}
+@media (max-width: 768px) {
+  .pricing .pricing__question {
+    font-size: 21px;
+  }
 }
 .pricing .pricing__card-row {
-  margin-bottom: 169px;
+  margin-bottom: 144px;
 }
 @media (max-width: 991px) {
   .pricing .pricing__card-row {
@@ -3063,7 +3093,10 @@ main {
   color: #46474e;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
-  border: 1.5px solid #ffa469;
+  outline-color: transparent;
+}
+.pricing .pricing__card:hover {
+  outline: 1.5px solid #ffa469;
 }
 @media (max-width: 991px) {
   .pricing .pricing__card {
@@ -3118,6 +3151,7 @@ main {
   line-height: 160%;
 }
 .pricing .pricing__founder-prev {
+  width: 638px;
   padding-top: 72px;
 }
 @media (max-width: 991px) {
@@ -3436,7 +3470,7 @@ main {
 .pricing .pricing__form-submit {
   width: 100%;
   margin-bottom: 16px;
-  padding: 24px 31px;
+  padding: 29px 31px;
   font-weight: 500;
   font-size: 14px;
   line-height: 100%;
@@ -3497,7 +3531,7 @@ main {
 .pricing .pricing__custom-check::after {
   content: "";
   position: absolute;
-  left: 3px;
+  left: 2.3px;
   top: -1px;
   width: 5px;
   height: 8px;
@@ -3602,7 +3636,7 @@ main {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  gap: 24px;
+  gap: 32px;
 }
 @media (max-width: 768px) {
   .get .get__item {
@@ -4149,7 +4183,7 @@ main {
   margin-top: 92px;
   padding: 72px;
   border-radius: 32px;
-  background-color: #ffd66b;
+  background-color: #FFD455;
   overflow: hidden;
 }
 @media (max-width: 1240px) {
@@ -4175,7 +4209,7 @@ main {
   right: 0;
   top: 0;
   bottom: 0;
-  width: 268px;
+  width: 328px;
   background-color: #393a3f;
 }
 @media (max-width: 991px) {
@@ -4285,7 +4319,7 @@ main {
   height: 72px;
   border: 1.5px solid #ffa469;
   border-radius: 12px;
-  background-color: #ffd66b;
+  background-color: transparent;
   font-weight: 300;
   font-size: 20px;
   line-height: 160%;
@@ -4330,9 +4364,7 @@ main {
   position: relative;
 }
 .work .work__form-submit {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 100%;
   padding: 24px 32px;
   font-weight: 500;
   font-size: 15px;
@@ -4351,7 +4383,7 @@ main {
 }
 .work .work__button-info {
   position: absolute;
-  right: -136px;
+  right: -155px;
   top: 35%;
   font-weight: 700;
   font-size: 17px;
@@ -4393,10 +4425,10 @@ main {
   }
 }
 .qa .qa__title {
-  margin-bottom: 72px;
+  margin-bottom: 69px;
   font-size: 56px;
   font-weight: 700;
-  line-height: 1.14;
+  line-height: 63.84px;
   color: #46474e;
   text-align: center;
 }
@@ -4430,6 +4462,9 @@ main {
 .qa .qa__box.open .qa__info {
   overflow: auto;
 }
+.qa .qa__box.open .qa__info p {
+  margin-bottom: 0;
+}
 .qa .qa__box.open .qa__lable-inner .icon::before {
   top: 25%;
   left: 42%;
@@ -4447,7 +4482,7 @@ main {
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
-  padding: 46px 48px;
+  padding: 48px 24px 48px 48px;
   cursor: pointer;
 }
 @media (max-width: 768px) {
@@ -4485,8 +4520,9 @@ main {
 }
 .qa .qa__subtitle {
   font-size: 23px;
-  line-height: 1.4;
-  color: #46474e;
+  font-weight: 300;
+  line-height: 140%;
+  color: #46474F;
 }
 @media (max-width: 768px) {
   .qa .qa__subtitle {
@@ -4495,6 +4531,10 @@ main {
 }
 .qa .qa__info {
   max-height: 0;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 27.2px;
+  color: #46474F;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   overflow: hidden;
@@ -4505,6 +4545,7 @@ main {
   }
 }
 .qa .qa__info p {
+  max-width: 667px;
   padding: 0 48px 48px;
 }
 @media (max-width: 768px) {
@@ -4587,15 +4628,15 @@ main {
   width: 100%;
   margin-bottom: 64px;
   padding: 24px 16px;
-  background: #ffd66b;
+  background: #FFD455;
   border-radius: 12px;
   font-size: 12px;
   font-weight: 700;
   line-height: 100%;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.84px;
   text-transform: uppercase;
   text-align: center;
-  color: #61504d;
+  color: #61504D;
 }
 @media (max-width: 768px) {
   .footer .footer__btn {
@@ -4622,6 +4663,7 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-bottom: 48px;
+  padding-left: 0;
 }
 @media (max-width: 768px) {
   .footer .footer__link-list {
@@ -4636,16 +4678,30 @@ main {
       -ms-flex-align: center;
           align-items: center;
   gap: 11px;
+  font-size: 20px;
   font-weight: 300;
-  font-size: 16px;
   line-height: 160%;
+}
+@media (max-width: 768px) {
+  .footer .footer__link-item {
+    font-size: 16px;
+  }
 }
 .footer .footer__link-item .text {
   color: #b2b2b5;
 }
 .footer .footer__link-item .footer__link {
+  position: relative;
   color: #fff;
-  border-bottom: 1px solid #65666d;
+}
+.footer .footer__link-item .footer__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 4px;
+  height: 1px;
+  background-color: #65666d;
 }
 .footer .footer__social-subtitle {
   margin-bottom: 6px;

@@ -64,6 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (currentBox.classList.contains("open")) {
       currentContent.style.maxHeight = `${currentContent.scrollHeight}px`;
+      currentContent.style.marginTop = `-16px`;
     }
   }
 

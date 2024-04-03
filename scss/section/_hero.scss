@@ -4,6 +4,7 @@
   @media (max-width: 991px) {
     margin-bottom: 108px;
   }
+
   @media (max-width: 768px) {
     margin-bottom: 98px;
   }
@@ -20,11 +21,13 @@
       margin-bottom: 32px;
       font-size: 48px;
     }
+
     @media (max-width: 991px) {
       margin-bottom: 24px;
       font-size: 30px;
     }
   }
+
   .hero__description {
     position: relative;
     display: flex;
@@ -52,10 +55,12 @@
         right: -68px;
         top: -49px;
       }
+
       @media (max-width: 768px) {
         display: none;
       }
     }
+
     .text-with-border {
       position: relative;
       z-index: 0;
@@ -83,6 +88,7 @@
         border-radius: 6px;
       }
     }
+
     .small-text {
       font-weight: 400;
       font-size: 19px;
@@ -95,6 +101,7 @@
       }
     }
   }
+
   .hero__info-card-wrapper {
     margin-bottom: 56px;
     flex-wrap: nowrap;
@@ -102,10 +109,12 @@
     @media (max-width: 991px) {
       margin-bottom: 42px;
     }
+
     @media (max-width: 991px) {
       margin-bottom: 28px;
     }
   }
+
   .hero__info-card {
     position: relative;
     max-width: 344px;
@@ -164,9 +173,20 @@
       }
     }
   }
+
   .hero__card-text {
     margin: 0;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 114%;
+    color: #46474F;
+
+    b {
+      font-weight: 700;
+    }
   }
+
   .hero__button {
     display: block;
     max-width: fit-content;
@@ -181,6 +201,7 @@
     color: #61504d;
     background: #ffd66b;
     border-radius: 12px;
+
     @media (max-width: 768px) {
       padding: 19px 24px;
     }

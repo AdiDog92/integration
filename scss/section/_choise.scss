@@ -4,7 +4,7 @@
   .choice__inner {
     position: relative;
     padding: 96px;
-    border-radius: 48px;
+    border-radius: 32px;
     background: #46474e;
 
     @media (max-width: 1240px) {
@@ -101,7 +101,7 @@
   .choice__item {
     display: flex;
     min-height: 272px;
-    padding: 43px;
+    padding: 56px;
     border-radius: 24px;
     margin-bottom: 20px;
 
@@ -125,7 +125,7 @@
     }
 
     &--2 {
-      background: url("../img/choice-card-2.svg") center right/ auto no-repeat,
+      background: url("../img/choice-card-2.svg") bottom right/ auto no-repeat,
         #fff;
 
       @media (max-width: 1100px) {
@@ -151,10 +151,10 @@
     }
 
     &--4 {
-      background: url("../img/choice-card-4.svg") 90% 50% / auto no-repeat, #fff;
+      background: url("../img/choice-card-4.svg") 90% 100% / auto no-repeat, #fff;
 
       @media (max-width: 1100px) {
-        background-position: 100% 50%;
+        background-position: 100% 100%;
       }
 
       @media (max-width: 768px) {
@@ -165,6 +165,10 @@
     &--5 {
       background: url("../img/choice-card-5.svg") center right/ auto no-repeat,
         #fff;
+
+      .choice__card-descr {
+        padding-right: 31px ;
+      }
 
       @media (max-width: 1100px) {
         background-size: 23%;
@@ -301,6 +305,21 @@
     font-size: 23px;
     line-height: 140%;
     color: #fff;
+
+    .text-with-border {
+      position: relative;
+      z-index: 0;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #FFD454 -1.74%, #FF9F5C 101.66%), #FFCB75;
+      }
+    }
 
     @media (max-width: 991px) {
       margin-bottom: 32px;
