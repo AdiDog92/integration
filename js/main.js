@@ -91,22 +91,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // change photo
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          document.querySelector(".work__img").src = entry.target.dataset.img;
-        }
-      });
-    },
-    { threshold: 0.5 }
-  );
-
-  document
-    .querySelectorAll(".work__card[data-img]")
-    .forEach((card) => observer.observe(card));
-
   // Динамический заголовок формы
   document.querySelector('#modalForm').addEventListener('show.bs.modal', event => {
 
