@@ -1,5 +1,6 @@
 .service {
   margin-bottom: 96px;
+
   .service__inner {
     position: relative;
     padding: 96px;
@@ -24,6 +25,7 @@
       }
     }
   }
+
   .service__title {
     margin-bottom: 71px;
     font-size: 56px;
@@ -37,6 +39,7 @@
       font-size: 38px;
     }
   }
+
   .service__cards-wrapper {
     position: relative;
     display: flex;
@@ -49,6 +52,7 @@
       overflow-y: auto;
     }
   }
+
   .service__card {
     display: flex;
     align-items: flex-start;
@@ -62,6 +66,7 @@
     transition: 0.3s ease-in-out;
     border: 1px solid transparent;
     transition: .3s ease;
+
     &:hover {
       border-color: #FF9F5C;
     }
@@ -69,18 +74,22 @@
     @media (max-width: 1240px) {
       padding: 32px;
     }
+
     @media (max-width: 991px) {
       width: 48%;
       padding: 24px;
     }
+
     @media (max-width: 768px) {
       width: 75%;
       padding: 32px;
     }
   }
+
   .service__card-top {
     margin-bottom: 70px;
   }
+
   .service__card-title {
     margin-bottom: 32px;
     font-size: 23px;
@@ -88,6 +97,7 @@
     line-height: 1.14;
     color: #46474e;
   }
+
   .service__card-list {
     padding-left: 15px;
     margin: 0;
@@ -96,16 +106,19 @@
     line-height: 1.6;
     color: #46474e;
   }
+
   .service__card-item {
     font-size: 15px;
     font-weight: 300;
     line-height: 1.6;
     color: #46474e;
     list-style-type: disc;
+
     &:not(:last-child) {
       margin-bottom: 16px;
     }
   }
+
   .service__card-term {
     display: flex;
     align-items: center;
@@ -114,12 +127,14 @@
     font-weight: 500;
     line-height: 1.4;
     color: #46474e;
+
     .icon {
       width: 24px;
       height: 24px;
       background: url("../img/timer-start.svg") center / contain no-repeat;
     }
   }
+
   .service__show-more {
     position: relative;
     z-index: 1;
@@ -146,6 +161,7 @@
       margin-bottom: 128px;
     }
   }
+
   .service__form-inner {
     position: relative;
     padding: 72px;
@@ -188,7 +204,7 @@
       top: 0;
       bottom: -45px;
       width: 634px;
-      background: url("../img/kristina-2.png") center / contain no-repeat;
+      background: url("../img/kristina.webp") center / contain no-repeat;
 
       @media (max-width: 991px) {
         top: auto;
@@ -204,6 +220,7 @@
       }
     }
   }
+
   .service__form-title {
     max-width: 532px;
     margin-bottom: 40px;
@@ -216,9 +233,16 @@
       margin-bottom: 32px;
       font-size: 34px;
     }
+
+    @media (max-width: 768px) {
+      text-align: center;
+      font-size: 28px;
+    }
   }
+
   .service__form-description {
-    width: 470px;
+    max-width: 470px;
+    width: 100%;
     margin-bottom: 61px;
     font-size: 23px;
     font-weight: 300;
@@ -226,14 +250,21 @@
     color: #46474e;
 
     @media (max-width: 991px) {
-      width: 352px;
+      max-width: 352px;
       font-size: 18px;
       margin-bottom: 30px;
     }
+
+    @media (max-width: 768px) {
+      text-align: center;
+      font-size: 16px;
+    }
   }
+
   .service__form {
     max-width: 284px;
   }
+
   .service__form-control {
     width: 100%;
     height: 72px;
@@ -245,6 +276,7 @@
     line-height: 160%;
     text-align: center;
     color: #46474e;
+
     &::placeholder {
       font-weight: 300;
       font-size: 20px;
@@ -256,9 +288,11 @@
       box-shadow: none;
     }
   }
+
   .service__button-wrapper {
     position: relative;
   }
+
   .service__form-submit {
     width: 100%;
     padding: 24px 32px;
@@ -272,6 +306,7 @@
     border-radius: 12px;
     background-color: #fff;
   }
+
   .service__button-info {
     position: absolute;
     right: -136px;
@@ -280,6 +315,7 @@
     font-size: 17px;
     line-height: 140%;
     color: #46474e;
+
     @media (max-width: 1100px) {
       display: none;
     }

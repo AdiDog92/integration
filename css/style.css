@@ -1386,7 +1386,7 @@ main {
   right: -28px;
   width: 671px;
   height: 572px;
-  background: url("../img/ksenia.png") center/contain no-repeat;
+  background: url("../img/ksenia.webp") center/contain no-repeat;
 }
 @media (max-width: 1240px) {
   .our-stories .our-stories__form-inner::before {
@@ -2307,7 +2307,7 @@ main {
   }
 }
 .choice .choice__description {
-  max-width: 676px;
+  max-width: 682px;
   margin: 0 auto 63px;
   font-weight: 300;
   font-size: 23px;
@@ -2477,7 +2477,7 @@ main {
   right: -28px;
   width: 671px;
   height: 572px;
-  background: url("../img/sergey.png") center/contain no-repeat;
+  background: url("../img/sergey.webp") center/contain no-repeat;
 }
 @media (max-width: 1130px) {
   .choice .choice__form-inner::before {
@@ -2883,7 +2883,7 @@ main {
   top: 0;
   bottom: -45px;
   width: 634px;
-  background: url("../img/kristina-2.png") center/contain no-repeat;
+  background: url("../img/kristina.webp") center/contain no-repeat;
 }
 @media (max-width: 991px) {
   .service .service__form-inner::before {
@@ -2914,8 +2914,15 @@ main {
     font-size: 34px;
   }
 }
+@media (max-width: 768px) {
+  .service .service__form-title {
+    text-align: center;
+    font-size: 28px;
+  }
+}
 .service .service__form-description {
-  width: 470px;
+  max-width: 470px;
+  width: 100%;
   margin-bottom: 61px;
   font-size: 23px;
   font-weight: 300;
@@ -2924,9 +2931,15 @@ main {
 }
 @media (max-width: 991px) {
   .service .service__form-description {
-    width: 352px;
+    max-width: 352px;
     font-size: 18px;
     margin-bottom: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .service .service__form-description {
+    text-align: center;
+    font-size: 16px;
   }
 }
 .service .service__form {
@@ -3157,9 +3170,14 @@ main {
 }
 @media (max-width: 991px) {
   .pricing .pricing__founder-prev {
-    max-width: 424px;
+    width: 424px;
     margin: 0 auto;
     padding-top: 0;
+  }
+}
+@media (max-width: 758px) {
+  .pricing .pricing__founder-prev {
+    width: 360px;
   }
 }
 .pricing .pricing__founder-img {
@@ -3723,7 +3741,7 @@ main {
   right: 0px;
   width: 584px;
   height: 594px;
-  background: url("../img/dmitri.png") center/contain no-repeat;
+  background: url("../img/dmitri.webp") center/contain no-repeat;
 }
 @media (max-width: 1140px) {
   .get .get__form-inner::before {
@@ -3923,7 +3941,6 @@ main {
   font-size: 48px;
   font-weight: 700;
   line-height: 1.14;
-  color: #fff;
   text-align: center;
 }
 @media (max-width: 768px) {
@@ -4233,7 +4250,7 @@ main {
   bottom: 0px;
   height: 536px;
   width: 610px;
-  background: url("../img/natalia.png") center/contain no-repeat;
+  background: url("../img/natalia.webp") center/contain no-repeat;
 }
 @media (max-width: 1240px) {
   .work .work__form-banner::before {
@@ -4771,8 +4788,12 @@ main {
     gap: 12px;
   }
 }
+.footer .footer__requisits {
+  margin: 0;
+}
 .footer .footer__policy-info {
   margin-bottom: 0;
+  text-align: center;
 }
 .footer .footer__policy-link {
   padding: 13px;
